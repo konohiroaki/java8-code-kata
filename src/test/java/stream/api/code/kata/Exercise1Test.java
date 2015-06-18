@@ -1,6 +1,5 @@
 package stream.api.code.kata;
 
-import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import java.util.List;
@@ -11,6 +10,8 @@ import java.util.stream.Stream;
 
 import stream.api.code.kata.utils.ClassicOnlineStore;
 
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.*;
 import static stream.api.code.kata.utils.AssertUtil.isLambda;
 
@@ -29,8 +30,8 @@ public class Exercise1Test extends ClassicOnlineStore {
 
         assertTrue("Solution for Predicate should be lambda expression", isLambda(richCustomerCondition));
         List<Customer> richCustomer = richCustomerStream.collect(Collectors.toList());
-        assertThat(richCustomer, Matchers.hasSize(2));
-        assertThat(richCustomer, Matchers.hasItems(customerList.get(3), customerList.get(7)));
+        assertThat(richCustomer, hasSize(2));
+        assertThat(richCustomer, contains(customerList.get(3), customerList.get(7)));
     }
 
     @Test
@@ -47,7 +48,7 @@ public class Exercise1Test extends ClassicOnlineStore {
 
         assertTrue(isLambda(getAgeFunction));
         List<Integer> richCustomer = ageStream.collect(Collectors.toList());
-        assertThat(richCustomer, Matchers.hasSize(10));
-        assertThat(richCustomer, Matchers.hasItems(22, 27, 28, 38, 26, 22, 32, 35, 21, 36));
+        assertThat(richCustomer, hasSize(10));
+        assertThat(richCustomer, contains(22, 27, 28, 38, 26, 22, 32, 35, 21, 36));
     }
 }
