@@ -29,3 +29,7 @@ Check the 'solution' branch, but please try to solve by yourself once.
 2. Exercise2Test.java
 
 `Stream#sorted`, `Stream#distinct`, `Stream#limit` and `Stream#flatMap`
+
+3. Exercise3Test.java
+
+`Stream#collect` and `Collector`
