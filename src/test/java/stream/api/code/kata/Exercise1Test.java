@@ -25,8 +25,8 @@ public class Exercise1Test extends ClassicOnlineStore {
          * Create a {@link Stream} from customerList only including customer who has more than 10000 money.
          * Use lambda expression for Predicate and {@link Stream#filter} for filtering.
          */
-        Predicate<Customer> richCustomerCondition = null;
-        Stream<Customer> richCustomerStream = null;
+        Predicate<Customer> richCustomerCondition = e -> e.getMoney() > 10000;
+        Stream<Customer> richCustomerStream = customerList.stream().filter(richCustomerCondition);
 
         assertTrue("Solution for Predicate should be lambda expression", isLambda(richCustomerCondition));
         List<Customer> richCustomer = richCustomerStream.collect(Collectors.toList());
@@ -43,8 +43,8 @@ public class Exercise1Test extends ClassicOnlineStore {
          * Use method reference(best) or lambda expression(okay) for Function
          * and {@link Stream#map} for mapping age value to stream.
          */
-        Function<Customer, Integer> getAgeFunction = null;
-        Stream<Integer> ageStream = null;
+        Function<Customer, Integer> getAgeFunction = Customer::getAge;
+        Stream<Integer> ageStream = customerList.stream().map(getAgeFunction);
 
         assertTrue(isLambda(getAgeFunction));
         List<Integer> richCustomer = ageStream.collect(Collectors.toList());
