@@ -24,8 +24,8 @@ Check the 'solution' branch, but please try to solve by yourself once.
 
 1. Exercise1Test.java
 
-Lets you use  `Stream#filter` and `Stream#map` to know about the very basic and useful part of stream API.
+`Stream#filter` and `Stream#map`
 
 2. Exercise2Test.java
 
-Now implementing
+`Stream#sorted`, `Stream#distinct`, `Stream#limit` and `Stream#flatMap`
