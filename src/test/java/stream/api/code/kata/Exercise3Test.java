@@ -37,7 +37,7 @@ public class Exercise3Test extends ClassicOnlineStore {
         Comparator<Integer> comparator = null;
         Optional<Integer> richestCustomer = null;
 
-        System.out.println(comparator.getClass().getSimpleName());
+        assertThat(comparator.getClass().getSimpleName(), is("NaturalOrderComparator"));
         assertThat(richestCustomer.get(), is(12000));
     }
 
@@ -52,7 +52,6 @@ public class Exercise3Test extends ClassicOnlineStore {
         Comparator<Customer> comparator = null;
         Optional<Customer> youngestCustomer = null;
 
-        System.out.println(comparator.getClass().getSimpleName());
         assertThat(youngestCustomer.get(), is(customerList.get(8)));
     }
 }
