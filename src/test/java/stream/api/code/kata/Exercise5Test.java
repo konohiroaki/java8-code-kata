@@ -81,7 +81,7 @@ public class Exercise5Test extends ClassicOnlineStore {
 
         assertThat(ageDistribution.size(), is(9));
         ageDistribution.forEach((k, v) -> {
-            if(k.equals(22)){
+            if (k.equals(22)) {
                 assertThat(v, is(2L));
             } else {
                 assertThat(v, is(1L));
