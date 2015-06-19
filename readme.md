@@ -22,34 +22,34 @@ Check the 'solution' branch, but please try to solve by yourself once.
 
 ### Chapters
 
-1. Exercise1Test.java
++ Exercise1Test.java
 
 `Stream#filter` and `Stream#map`
 
-2. Exercise2Test.java
++ Exercise2Test.java
 
 `Stream#sorted`, `Stream#distinct`, `Stream#limit` and `Stream#flatMap`
 
-3. Exercise3Test.java
++ Exercise3Test.java
 
-`Stream#count`, `Stream#max`, `Stream#min` and `Stream#average`
+`Stream#count`, `Stream#max` and `Stream#min`
 
-4. Exercise4Test.java
++ Exercise4Test.java
 
 `Stream#findFirst`, `Stream#findAny`, `Stream#allMatch`, `Stream#anyMatch` and `Stream#noneMatch`
 
-5. Exercise5Test.java
++ Exercise5Test.java
 
 `Stream#reduce`, `Stream#collect` and `Collectors`
 
-6. Exercise6Test.java
++ Exercise6Test.java
 
 `Collector`
 
-7. Exercise7Test.java
++ Exercise7Test.java
 
 `Stream#of`, `Stream#generate` and `Stream#iterate`
 
-8. Exercise8Test.java
++ Exercise8Test.java
 
 `IntStream`, `LongStream` and `DoubleStream`
