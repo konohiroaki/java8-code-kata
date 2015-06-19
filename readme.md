@@ -32,4 +32,24 @@ Check the 'solution' branch, but please try to solve by yourself once.
 
 3. Exercise3Test.java
 
-`Stream#collect` and `Collector`
+`Stream#count`, `Stream#max`, `Stream#min` and `Stream#average`
+
+4. Exercise4Test.java
+
+`Stream#findFirst`, `Stream#findAny`, `Stream#allMatch`, `Stream#anyMatch` and `Stream#noneMatch`
+
+5. Exercise5Test.java
+
+`Stream#reduce`, `Stream#collect` and `Collectors`
+
+6. Exercise6Test.java
+
+`Collector`
+
+7. Exercise7Test.java
+
+`Stream#of`, `Stream#generate` and `Stream#iterate`
+
+8. Exercise8Test.java
+
+`IntStream`, `LongStream` and `DoubleStream`
