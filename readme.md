@@ -36,7 +36,7 @@ Check the 'solution' branch, but please try to solve by yourself once.
 
 + Exercise4Test.java
 
-`Stream#findFirst`, `Stream#findAny`, `Stream#allMatch`, `Stream#anyMatch` and `Stream#noneMatch`
+`Stream#findFirst`, `Stream#allMatch`, `Stream#anyMatch` and `Stream#noneMatch`
 
 + Exercise5Test.java
 
