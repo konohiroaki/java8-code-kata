@@ -40,6 +40,6 @@ public class Exercise7Test extends ClassicOnlineStore {
         LongStream priceStream = null;
         long priceSum = 0;
 
-        assertThat(priceSum, is(63360L));
+        assertThat(priceSum, is(60930L));
     }
 }
