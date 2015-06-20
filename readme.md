@@ -49,3 +49,7 @@ Check the 'solution' branch, but please try to solve by yourself once.
 + Exercise7Test.java
 
 `IntStream`, `LongStream` and `DoubleStream`
+
++ Exercise8Test.java (Optional)
+
+Advanced problems

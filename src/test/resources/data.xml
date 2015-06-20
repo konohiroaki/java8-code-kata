@@ -22,8 +22,8 @@
             <item name="screwdriver" price="600"/>
         </shop>
         <shop name="Lucky Voyage">
-            <item name="chair" price="1800"/>
-            <item name="desk" price="3600"/>
+            <item name="chair" price="600"/>
+            <item name="desk" price="1800"/>
             <item name="cable" price="230"/>
             <item name="speaker" price="19000"/>
             <item name="headphone" price="8800"/>
@@ -36,11 +36,11 @@
             <item name="poultice" price="900"/>
         </shop>
         <shop name="The Rapid Supermarket">
-            <item name="spinach" price="10"/>
-            <item name="ginseng" price="20"/>
-            <item name="onion" price="20"/>
-            <item name="ice cream" price="20"/>
-            <item name="crisps" price="20"/>
+            <item name="spinach" price="100"/>
+            <item name="ginseng" price="120"/>
+            <item name="onion" price="160"/>
+            <item name="ice cream" price="200"/>
+            <item name="crisps" price="80"/>
         </shop>
     </shops>
     <customers>
