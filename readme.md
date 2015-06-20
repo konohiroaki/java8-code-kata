@@ -40,16 +40,12 @@ Check the 'solution' branch, but please try to solve by yourself once.
 
 + Exercise5Test.java
 
-`Stream#reduce`, `Stream#collect` and `Collectors`
+`Stream#collect` and `Collectors`
 
 + Exercise6Test.java
 
-`Collector`
+`Stream#of` and `Stream#iterate`
 
 + Exercise7Test.java
-
-`Stream#of`, `Stream#generate` and `Stream#iterate`
-
-+ Exercise8Test.java
 
 `IntStream`, `LongStream` and `DoubleStream`
