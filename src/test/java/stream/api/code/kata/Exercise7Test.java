@@ -23,8 +23,8 @@ public class Exercise7Test extends ClassicOnlineStore {
          * Create {@link IntStream} with customer ages using {@link Stream#mapToInt}
          * Then calculate the average of ages using {@link IntStream#average}
          */
-        IntStream ageStream = null;
-        OptionalDouble average = null;
+        IntStream ageStream = customerList.stream().mapToInt(Customer::getAge);
+        OptionalDouble average = ageStream.average();
 
         assertThat(average.getAsDouble(), is(28.7));
     }
@@ -37,8 +37,8 @@ public class Exercise7Test extends ClassicOnlineStore {
          * Create {@link LongStream} with all items' prices using {@link Stream#mapToLong}
          * Then calculate the sum of prices using {@link LongStream#sum}
          */
-        LongStream priceStream = null;
-        long priceSum = 0;
+        LongStream priceStream = shopList.stream().flatMap(o -> o.getItemList().stream()).mapToLong(Item::getPrice);
+        long priceSum = priceStream.sum();
 
         assertThat(priceSum, is(63360L));
     }
