@@ -18,7 +18,7 @@ public class Exercise6Test extends ClassicOnlineStore {
         /**
          * Create a stream with string values "one" "two" "three" using {@link Stream#of}
          */
-        Stream<String> oneTwoThreeStream = null;
+        Stream<String> oneTwoThreeStream = Stream.of("one", "two", "three");
 
         List<String> oneTwoThreeList = oneTwoThreeStream.collect(Collectors.toList());
         assertThat(oneTwoThreeList, contains("one", "two", "three"));
@@ -29,7 +29,7 @@ public class Exercise6Test extends ClassicOnlineStore {
         /**
          * Create a stream only with multiples of 3, starting from 0, size of 10, using {@link Stream#iterate}
          */
-        Stream<Integer> numbers = null;
+        Stream<Integer> numbers = Stream.iterate(0, e -> e + 3).limit(10);
 
         List<Integer> numbersList = numbers.collect(Collectors.toList());
         assertThat(numbersList, contains(0, 3, 6, 9, 12, 15, 18, 21, 24, 27));
