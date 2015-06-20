@@ -40,6 +40,6 @@ public class Exercise7Test extends ClassicOnlineStore {
         LongStream priceStream = shopList.stream().flatMap(o -> o.getItemList().stream()).mapToLong(Item::getPrice);
         long priceSum = priceStream.sum();
 
-        assertThat(priceSum, is(63360L));
+        assertThat(priceSum, is(60930L));
     }
 }
