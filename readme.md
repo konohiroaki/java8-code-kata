@@ -2,9 +2,9 @@
 
 ### What is Code Kata?
 
-To be an expert in any area, you need to practice basic things over and over again to be able to perform more difficult things or thinking deeply. _Kata_ is an exercise used in martial arts. Martial artists practices the _kata_ over and over again.
+To be an expert in any area, you need to practice basic things over and over again in order to be able to perform more difficult things or thinking deeply. _Kata_ is an exercise used in martial arts. Martial artists practices the _kata_ over and over again to understand the essence and to become comfortable with it.
 
-_Code Kata_ is a way to practice basic parts of programming, _Code Kata_ should be periodically repeated to achieve huge positive effect.
+_Code Kata_ is a way to practice basic parts of programming, _Code Kata_ should be periodically repeated to achieve huge positive effect from it.
 
 For more detail please refer [codekata.com](http://codekata.com/)
 
@@ -14,11 +14,11 @@ The _Stream API Code Kata_ is created to walk-through java stream API functions.
 
 ### Usage
 
-Edit the unit test following the comment to pass the test.
+Edit the unit test by following the comments to pass the test.
 
 ### Where are the answers?
 
-Check the 'solution' branch, but please try to solve by yourself once.
+Check the 'solution' branch, but please try to solve by yourself at first.
 
 ### Chapters
 
