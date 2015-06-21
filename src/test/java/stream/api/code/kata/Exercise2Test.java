@@ -53,7 +53,7 @@ public class Exercise2Test extends ClassicOnlineStore {
          * Use {@link Stream#limit} to limit the size of the stream.
          */
         Stream<String> top3RichCustomerStream = customerList.stream()
-            .sorted((o1, o2) -> o2.getMoney() - o1.getMoney())
+            .sorted((customer1, customer2) -> customer2.getMoney() - customer1.getMoney())
             .limit(3)
             .map(Customer::getName);
 
@@ -82,7 +82,7 @@ public class Exercise2Test extends ClassicOnlineStore {
          * Use {@link Stream#flatMap} to create a stream from each element of a stream.
          * Create a stream with items' names stored in {@link Customer.wantToBuy}
          */
-        Function<Customer, Stream<Item>> getItemStream = e -> e.getWantToBuy().stream();
+        Function<Customer, Stream<Item>> getItemStream = customer -> customer.getWantToBuy().stream();
         Stream<String> itemStream = customerList.stream().flatMap(getItemStream).map(Item::getName);
 
         assertTrue(isLambda(getItemStream));

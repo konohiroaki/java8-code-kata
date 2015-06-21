@@ -25,7 +25,7 @@ public class Exercise1Test extends ClassicOnlineStore {
          * Create a {@link Stream} from customerList only including customer who has more than 10000 money.
          * Use lambda expression for Predicate and {@link Stream#filter} for filtering.
          */
-        Predicate<Customer> richCustomerCondition = e -> e.getMoney() > 10000;
+        Predicate<Customer> richCustomerCondition = customer -> customer.getMoney() > 10000;
         Stream<Customer> richCustomerStream = customerList.stream().filter(richCustomerCondition);
 
         assertTrue("Solution for Predicate should be lambda expression", isLambda(richCustomerCondition));

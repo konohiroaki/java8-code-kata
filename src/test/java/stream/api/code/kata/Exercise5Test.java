@@ -65,7 +65,7 @@ public class Exercise5Test extends ClassicOnlineStore {
          * Get oldest customer by using {@link Collectors#maxBy}. Don't use any intermediate operations.
          */
         Optional<Customer> oldestCustomer = customerList.stream()
-            .collect(Collectors.maxBy((o1, o2) -> o1.getAge() - o2.getAge()));
+            .collect(Collectors.maxBy((customer1, customer2) -> customer1.getAge() - customer2.getAge()));
 
         assertThat(oldestCustomer.get(), is(customerList.get(3)));
     }

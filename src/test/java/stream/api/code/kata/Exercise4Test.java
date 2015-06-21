@@ -33,7 +33,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         /**
          * Check whether any customer older than 40 exists or not, using {@link Stream#anyMatch}
          */
-        boolean olderThan40Exists = customerList.stream().anyMatch(o -> o.getAge() > 40);
+        boolean olderThan40Exists = customerList.stream().anyMatch(customer -> customer.getAge() > 40);
 
         assertThat(olderThan40Exists, is(false));
     }
@@ -45,7 +45,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         /**
          * Check whether all customer are older than 20 or not, using {@link Stream#allMatch}
          */
-        boolean allOlderThan20 = customerList.stream().allMatch(o -> o.getAge() > 20);
+        boolean allOlderThan20 = customerList.stream().allMatch(customer -> customer.getAge() > 20);
 
         assertThat(allOlderThan20, is(true));
     }
@@ -58,7 +58,7 @@ public class Exercise4Test extends ClassicOnlineStore {
          * Confirm that none of the customer has empty list for their {@link Customer.wantToBuy}
          * using {@link Stream#noneMatch}
          */
-        boolean everyoneWantsSomething = customerList.stream().noneMatch(o -> o.getWantToBuy().isEmpty());
+        boolean everyoneWantsSomething = customerList.stream().noneMatch(customer -> customer.getWantToBuy().isEmpty());
 
         assertThat(everyoneWantsSomething, is(true));
     }
