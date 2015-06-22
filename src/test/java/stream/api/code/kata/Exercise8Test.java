@@ -21,7 +21,7 @@ public class Exercise8Test extends ClassicOnlineStore {
         Stream<Shop> shopStream = this.mall.getShopList().stream();
 
         /**
-         * Find items that are not on sale in any shop and create a set of their names.
+         * Create a set of item names that are in {@link Customer.wantToBuy} but not on sale in any shop.
          */
         List<String> itemListOnSale = null;
         Set<String> itemSetNotOnSale = null;
