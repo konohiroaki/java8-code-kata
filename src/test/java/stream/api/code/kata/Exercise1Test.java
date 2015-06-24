@@ -22,10 +22,10 @@ public class Exercise1Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a {@link Stream} from customerList only including customer who has more budget than 10000.
-         * Use lambda expression for Predicate and {@link Stream#filter} for filtering.
+         * Create a {@link java.util.stream.Stream} from customerList only including customer who has more budget than 10000.
+         * Use lambda expression for Predicate and {@link java.util.stream.Stream#filter} for filtering.
          */
-        Predicate<Customer> richCustomerCondition = customer -> customer.getMoney() > 10000;
+        Predicate<Customer> richCustomerCondition = customer -> customer.getBudget() > 10000;
         Stream<Customer> richCustomerStream = customerList.stream().filter(richCustomerCondition);
 
         assertTrue("Solution for Predicate should be lambda expression", isLambda(richCustomerCondition));

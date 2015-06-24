@@ -48,7 +48,7 @@ public class Exercise8Test extends ClassicOnlineStore {
          */
         List<Item> onSale = shopStream.flatMap(shop -> shop.getItemList().stream()).collect(Collectors.toList());
         Predicate<Customer> havingEnoughMoney =
-            customer -> customer.getMoney() >= customer.getWantToBuy().stream().mapToInt(
+            customer -> customer.getBudget() >= customer.getWantToBuy().stream().mapToInt(
                 wantedItem -> onSale.stream().filter(shopItem -> shopItem.getName().equals(wantedItem.getName()))
                     .sorted((o1, o2) -> o1.getPrice() - o2.getPrice())
                     .findFirst().map(Item::getPrice).orElse(0)

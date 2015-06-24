@@ -35,7 +35,7 @@ public class Exercise3Test extends ClassicOnlineStore {
          * Don't use {@link Stream#sorted}
          */
         Comparator<Integer> comparator = Comparator.naturalOrder();
-        Optional<Integer> richestCustomer = customerList.stream().map(Customer::getMoney).max(comparator);
+        Optional<Integer> richestCustomer = customerList.stream().map(Customer::getBudget).max(comparator);
 
         assertThat(comparator.getClass().getSimpleName(), is("NaturalOrderComparator"));
         assertThat(richestCustomer.get(), is(12000));
