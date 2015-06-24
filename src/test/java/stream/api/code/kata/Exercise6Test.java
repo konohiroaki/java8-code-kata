@@ -14,18 +14,18 @@ public class Exercise6Test {
     @Test
     public void streamFromValues() {
         /**
-         * Create a stream with string values "one" "two" "three" using {@link Stream#of}
+         * Create a stream with string values "a" "b" "c" by using {@link Stream#of}
          */
-        Stream<String> oneTwoThreeStream = Stream.of("one", "two", "three");
+        Stream<String> abcStream = Stream.of("one", "two", "three");
 
-        List<String> oneTwoThreeList = oneTwoThreeStream.collect(Collectors.toList());
-        assertThat(oneTwoThreeList, contains("one", "two", "three"));
+        List<String> abcList = abcStream.collect(Collectors.toList());
+        assertThat(abcList, contains("a", "b", "c"));
     }
 
     @Test
     public void numberStream() {
         /**
-         * Create a stream only with multiples of 3, starting from 0, size of 10, using {@link Stream#iterate}
+         * Create a stream only with multiples of 3, starting from 0, size of 10, by using {@link Stream#iterate}
          */
         Stream<Integer> numbers = Stream.iterate(0, ele -> ele + 3).limit(10);
 

@@ -20,8 +20,8 @@ public class Exercise7Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create {@link IntStream} with customer ages using {@link Stream#mapToInt}
-         * Then calculate the average of ages using {@link IntStream#average}
+         * Create {@link IntStream} with customer ages by using {@link Stream#mapToInt}
+         * Then calculate the average of ages by using {@link IntStream#average}
          */
         IntStream ageStream = customerList.stream().mapToInt(Customer::getAge);
         OptionalDouble average = ageStream.average();

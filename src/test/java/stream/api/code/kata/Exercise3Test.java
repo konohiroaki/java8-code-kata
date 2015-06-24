@@ -19,7 +19,7 @@ public class Exercise3Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Count the sum of how many items there are in {@link Customer.wantToBuy} using {@link Stream#count}
+         * Count how many items there are in {@link Customer.wantToBuy} using {@link Stream#count}
          */
         long sum = customerList.stream().flatMap(customer -> customer.getWantToBuy().stream()).count();
 
@@ -31,7 +31,7 @@ public class Exercise3Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Find the richest customer's amount of money using {@link Stream#max} and {@link Comparator#naturalOrder}
+         * Find the richest customer's budget by using {@link Stream#max} and {@link Comparator#naturalOrder}
          * Don't use {@link Stream#sorted}
          */
         Comparator<Integer> comparator = Comparator.naturalOrder();
@@ -46,7 +46,7 @@ public class Exercise3Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Find the youngest customer using {@link Stream#min}
+         * Find the youngest customer by using {@link Stream#min}
          * Don't use {@link Stream#sorted}
          */
         Comparator<Customer> comparator = (customer1, customer2) -> customer1.getAge() - customer2.getAge();;

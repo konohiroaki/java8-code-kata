@@ -18,7 +18,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Find the first customer who registered this online store, using {@link Stream#findFirst}
+         * Find the first customer who registered this online store by using {@link Stream#findFirst}
          * The customerList are ascending ordered by registered timing.
          */
         Optional<Customer> firstCustomer = customerList.stream().findFirst();
@@ -31,7 +31,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Check whether any customer older than 40 exists or not, using {@link Stream#anyMatch}
+         * Check whether any customer older than 40 exists or not, by using {@link Stream#anyMatch}
          */
         boolean olderThan40Exists = customerList.stream().anyMatch(customer -> customer.getAge() > 40);
 
@@ -43,7 +43,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Check whether all customer are older than 20 or not, using {@link Stream#allMatch}
+         * Check whether all customer are older than 20 or not, by using {@link Stream#allMatch}
          */
         boolean allOlderThan20 = customerList.stream().allMatch(customer -> customer.getAge() > 20);
 
@@ -56,7 +56,7 @@ public class Exercise4Test extends ClassicOnlineStore {
 
         /**
          * Confirm that none of the customer has empty list for their {@link Customer.wantToBuy}
-         * using {@link Stream#noneMatch}
+         * by using {@link Stream#noneMatch}
          */
         boolean everyoneWantsSomething = customerList.stream().noneMatch(customer -> customer.getWantToBuy().isEmpty());
 

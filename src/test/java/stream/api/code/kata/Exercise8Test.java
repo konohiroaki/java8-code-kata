@@ -43,8 +43,8 @@ public class Exercise8Test extends ClassicOnlineStore {
 
         /**
          * Create a customer's name list including who are having enough money to buy all items they want which is on sale.
-         * Items not on sale can be counted as 0 money cost.
-         * If there is several same items with different amount of money, customer can choose the cheapest one.
+         * Items that are not on sale can be counted as 0 money cost.
+         * If there is several same items with different prices, customer can choose the cheapest one.
          */
         List<Item> onSale = shopStream.flatMap(shop -> shop.getItemList().stream()).collect(Collectors.toList());
         Predicate<Customer> havingEnoughMoney =
