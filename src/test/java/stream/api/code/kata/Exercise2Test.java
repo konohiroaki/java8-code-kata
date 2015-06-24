@@ -21,7 +21,8 @@ public class Exercise2Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Use {@link Stream#sorted} to sort the stream with age values.
+         * Create a stream with ascending ordered age values.
+         * Use {@link Stream#sorted} to sort them.
          */
         Stream<Integer> sortedAgeStream = null;
 
@@ -34,8 +35,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * {@link Stream#sorted} will sort with natural order by default.
-         * Create a Comparator for descending order and sort the age with it.
+         * Create a stream with descending ordered age values.
          */
         Comparator<Integer> descOrder = null;
         Stream<Integer> sortedAgeStream = null;
@@ -50,7 +50,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Use {@link Stream#limit} to limit the size of the stream.
+         * Create a stream with top 3 rich customers using {@link Stream#limit} to limit the size of the stream
          */
         Stream<String> top3RichCustomerStream = null;
 
@@ -63,7 +63,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Use {@link Stream#distinct} to make the stream with age values distinct.
+         * Create a stream with distinct age values using {@link Stream#distinct}
          */
         Stream<Integer> distinctAgeStream = null;
 
@@ -76,8 +76,8 @@ public class Exercise2Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Use {@link Stream#flatMap} to create a stream from each element of a stream.
          * Create a stream with items' names stored in {@link Customer.wantToBuy}
+         * Use {@link Stream#flatMap} to create a stream from each element of a stream.
          */
         Function<Customer, Stream<Item>> getItemStream = null;
         Stream<String> itemStream = null;
@@ -89,7 +89,5 @@ public class Exercise2Test extends ClassicOnlineStore {
                             "ice cream", "crisps", "chopsticks", "cable", "speaker", "headphone", "saw", "bond",
                             "plane", "bag", "cold medicine", "chair", "desk", "pants", "coat", "cup", "plate", "fork",
                             "spoon", "ointment", "poultice", "spinach", "ginseng", "onion"));
-
-
     }
 }

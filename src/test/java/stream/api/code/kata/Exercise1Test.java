@@ -22,7 +22,7 @@ public class Exercise1Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a {@link Stream} from customerList only including customer who has more than 10000 money.
+         * Create a {@link Stream} from customerList only including customer who has more budget than 10000.
          * Use lambda expression for Predicate and {@link Stream#filter} for filtering.
          */
         Predicate<Customer> richCustomerCondition = null;
@@ -40,8 +40,8 @@ public class Exercise1Test extends ClassicOnlineStore {
 
         /**
          * Create a {@link Stream} from customerList with age values.
-         * Use method reference(best) or lambda expression(okay) for Function
-         * and {@link Stream#map} for mapping age value to stream.
+         * Use method reference(best) or lambda expression(okay) for creating {@link Function} which will
+         * convert {@link Customer} to {@link Integer}, and then apply it by using {@link Stream#map}.
          */
         Function<Customer, Integer> getAgeFunction = null;
         Stream<Integer> ageStream = null;

@@ -24,7 +24,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a list of customer names using {@link Stream#collect} and {@link Collectors#toList}
+         * Create a list of customer names by using {@link Stream#collect} and {@link Collectors#toList}
          */
         List<String> nameList = null;
 
@@ -37,7 +37,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a set of customer age using {@link Stream#collect} and {@link Collectors#toSet}
+         * Create a set of customer age by using {@link Stream#collect} and {@link Collectors#toSet}
          */
         Set<Integer> ageSet = null;
 
@@ -50,7 +50,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a csv string of customer names in brackets "[]" using {@link Collectors#joining}
+         * Create a csv string of customer names in brackets "[]" by using {@link Collectors#joining}
          */
         String string = null;
 
@@ -62,7 +62,8 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Get oldest customer by using {@link Collectors#maxBy}. Don't use any intermediate operations.
+         * Get the oldest customer by using {@link Collectors#maxBy}.
+         * Don't use any intermediate operations.
          */
         Optional<Customer> oldestCustomer = null;
 
