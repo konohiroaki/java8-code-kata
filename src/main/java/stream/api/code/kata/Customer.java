@@ -9,7 +9,7 @@ public class Customer {
 
     private String name;
     private Integer age;
-    private Integer money;
+    private Integer budget;
     private List<Item> wantToBuy;
 
     @XmlAttribute
@@ -31,12 +31,12 @@ public class Customer {
     }
 
     @XmlAttribute
-    public Integer getMoney() {
-        return money;
+    public Integer getBudget() {
+        return budget;
     }
 
-    public void setMoney(Integer money) {
-        this.money = money;
+    public void setBudget(Integer budget) {
+        this.budget = budget;
     }
 
     @XmlElement(name = "item")

@@ -44,52 +44,52 @@
         </shop>
     </shops>
     <customers>
-        <customer name="Joe" age="22" money="8000">
+        <customer name="Joe" age="22" budget="8000">
             <item name="small table"/>
             <item name="plate"/>
             <item name="fork"/>
         </customer>
-        <customer name="Steven" age="27" money="2000">
+        <customer name="Steven" age="27" budget="2000">
             <item name="ice cream"/>
             <item name="screwdriver"/>
             <item name="cable"/>
             <item name="earphone"/>
         </customer>
-        <customer name="Patrick" age="28" money="4000">
+        <customer name="Patrick" age="28" budget="4000">
             <item name="onion"/>
             <item name="ice cream"/>
             <item name="crisps"/>
             <item name="chopsticks"/>
         </customer>
-        <customer name="Diana" age="38" money="12000">
+        <customer name="Diana" age="38" budget="12000">
             <item name="cable"/>
             <item name="speaker"/>
             <item name="headphone"/>
         </customer>
-        <customer name="Chris" age="26" money="9000">
+        <customer name="Chris" age="26" budget="9000">
             <item name="saw"/>
             <item name="bond"/>
             <item name="plane"/>
             <item name="bag"/>
         </customer>
-        <customer name="Kathy" age="22" money="6000">
+        <customer name="Kathy" age="22" budget="6000">
             <item name="cold medicine"/>
         </customer>
-        <customer name="Alice" age="32" money="2500">
+        <customer name="Alice" age="32" budget="2500">
             <item name="chair"/>
             <item name="desk"/>
         </customer>
-        <customer name="Andrew" age="35" money="11000">
+        <customer name="Andrew" age="35" budget="11000">
             <item name="pants"/>
             <item name="coat"/>
         </customer>
-        <customer name="Martin" age="21" money="1000">
+        <customer name="Martin" age="21" budget="1000">
             <item name="cup"/>
             <item name="plate"/>
             <item name="fork"/>
             <item name="spoon"/>
         </customer>
-        <customer name="Amy" age="36" money="2000">
+        <customer name="Amy" age="36" budget="2000">
             <item name="ointment"/>
             <item name="poultice"/>
             <item name="spinach"/>
