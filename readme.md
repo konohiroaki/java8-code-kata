@@ -50,6 +50,6 @@ Check the 'solution' branch, but please try to solve by yourself at first.
 
 `IntStream`, `LongStream` and `DoubleStream`
 
-+ Exercise8Test.java (Optional)
++ Exercise8Test.java
 
 Advanced problems

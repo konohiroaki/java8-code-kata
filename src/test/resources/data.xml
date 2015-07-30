@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mall>
     <shops>
-        <shop name="The White Shield">
+        <shop name="White Furniture">
             <item name="chair" price="2000"/>
             <item name="table" price="5500"/>
             <item name="small chair" price="1800"/>
             <item name="small table" price="2800"/>
         </shop>
-        <shop name="The Amazing Apothecary">
+        <shop name="Dish Devices">
             <item name="cup" price="380"/>
             <item name="plate" price="680"/>
             <item name="fork" price="210"/>
             <item name="spoon" price="210"/>
             <item name="chopsticks" price="180"/>
         </shop>
-        <shop name="The Fighting Kite">
+        <shop name="The Do It Ourselves">
             <item name="rope" price="800"/>
             <item name="saw" price="1400"/>
             <item name="bond" price="480"/>
             <item name="plane" price="2200"/>
             <item name="screwdriver" price="600"/>
         </shop>
-        <shop name="Lucky Voyage">
+        <shop name="Electrics">
             <item name="chair" price="600"/>
             <item name="desk" price="1800"/>
             <item name="cable" price="230"/>
@@ -29,7 +29,7 @@
             <item name="headphone" price="8800"/>
             <item name="earphone" price="7800"/>
         </shop>
-        <shop name="The Green Castle Chemist">
+        <shop name="Amazing Apothecary">
             <item name="cold medicine" price="800"/>
             <item name="ointment" price="500"/>
             <item name="eye-drops" price="600"/>
