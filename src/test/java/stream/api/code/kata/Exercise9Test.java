@@ -32,8 +32,7 @@ public class Exercise9Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Implement a Collector which can create a string with comma separated names shown in the assertion.
-         * You also need to change the wildcard to an actual type you will use for your collector.
+         * Implement a {@link Collector} which can create a String with comma separated names shown in the assertion.
          * The collector will be used by serial stream.
          */
         Supplier<StringJoiner> supplier = () -> new StringJoiner(",", "", "");
@@ -52,7 +51,8 @@ public class Exercise9Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a map with keys as item and values as set of customers who are wanting to buy that item.
+         * Implement a {@link Collector} which can create a {@link Map} with keys as item and
+         * values as {@link Set} of customers who are wanting to buy that item.
          * The collector will be used by parallel stream.
          */
         Supplier<Map<String, Set<String>>> supplier = HashMap::new;
