@@ -30,12 +30,13 @@ public class Exercise9Test extends ClassicOnlineStore {
 
         /**
          * Implement a Collector which can create a string with comma separated names shown in the assertion.
+         * You also need to change the wildcard to an actual type you will use for your collector.
          * The collector will be used by serial stream.
          */
-        Supplier<StringJoiner> supplier = null;
-        BiConsumer<StringJoiner, String> accumulator = null;
-        BinaryOperator<StringJoiner> combiner = null;
-        Function<StringJoiner, String> finisher = null;
+        Supplier<?> supplier = null;
+        BiConsumer<?, String> accumulator = null;
+        BinaryOperator<?> combiner = null;
+        Function<?, String> finisher = null;
 
         Collector<String, ?, String> toCsv =
             new CollectorImpl<>(supplier, accumulator, combiner, finisher, Collections.emptySet());
