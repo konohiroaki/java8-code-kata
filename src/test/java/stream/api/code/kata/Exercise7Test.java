@@ -9,6 +9,7 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 import stream.api.code.kata.entity.Customer;
+import stream.api.code.kata.entity.Item;
 import stream.api.code.kata.entity.Shop;
 import stream.api.code.kata.utils.ClassicOnlineStore;
 
