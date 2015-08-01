@@ -28,14 +28,13 @@ public class Exercise9Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Implement a Collector which can create a string with comma separated names shown in the assertion.
-         * You also need to change the wildcard to an actual type you will use for your collector.
+         * Implement a {@link Collector} which can create a String with comma separated names shown in the assertion.
          * The collector will be used by serial stream.
          */
-        Supplier<?> supplier = null;
-        BiConsumer<?, String> accumulator = null;
-        BinaryOperator<?> combiner = null;
-        Function<?, String> finisher = null;
+        Supplier<Object> supplier = null;
+        BiConsumer<Object, String> accumulator = null;
+        BinaryOperator<Object> combiner = null;
+        Function<Object, String> finisher = null;
 
         Collector<String, ?, String> toCsv =
             new CollectorImpl<>(supplier, accumulator, combiner, finisher, Collections.emptySet());
@@ -48,13 +47,14 @@ public class Exercise9Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a map with keys as item and values as set of customers who are wanting to buy that item.
+         * Implement a {@link Collector} which can create a {@link Map} with keys as item and
+         * values as {@link Set} of customers who are wanting to buy that item.
          * The collector will be used by parallel stream.
          */
-        Supplier<Map<String, Set<String>>> supplier = null;
-        BiConsumer<Map<String, Set<String>>, Customer> accumulator = null;
-        BinaryOperator<Map<String, Set<String>>> combiner = null;
-        Function<Map<String, Set<String>>, Map<String, Set<String>>> finisher = null;
+        Supplier<Object> supplier = null;
+        BiConsumer<Object, Customer> accumulator = null;
+        BinaryOperator<Object> combiner = null;
+        Function<Object, Map<String, Set<String>>> finisher = null;
 
         Collector<Customer, ?, Map<String, Set<String>>> toItemAsKey =
             new CollectorImpl<>(supplier, accumulator, combiner, finisher, EnumSet.of(
