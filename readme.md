@@ -14,7 +14,7 @@ The _Stream API Code Kata_ is created to walk-through java stream API functions.
 
 ### Usage
 
-Edit the unit test by following the comments to pass the test.
+Edit the unit tests to pass them by following its description.
 
 ### Where are the answers?
 
@@ -53,3 +53,7 @@ Check the 'solution' branch, but please try to solve by yourself at first.
 + Exercise8Test.java
 
 Advanced problems
+
++ Exercise9Test.java
+
+`Collector`
