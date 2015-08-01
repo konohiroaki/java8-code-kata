@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+import stream.api.code.kata.entity.Customer;
 import stream.api.code.kata.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;

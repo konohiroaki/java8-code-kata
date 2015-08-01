@@ -4,7 +4,7 @@ import java.io.File;
 
 import javax.xml.bind.JAXB;
 
-import stream.api.code.kata.OnlineShoppingMall;
+import stream.api.code.kata.entity.OnlineShoppingMall;
 
 public class ClassicOnlineStore {
 
