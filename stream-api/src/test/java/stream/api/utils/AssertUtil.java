@@ -1,4 +1,4 @@
-package stream.api.code.kata.utils;
+package stream.api.utils;
 
 public class AssertUtil {
 

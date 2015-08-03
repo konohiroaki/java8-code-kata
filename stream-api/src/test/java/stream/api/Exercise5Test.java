@@ -1,4 +1,4 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
@@ -6,11 +6,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.utils.ClassicOnlineStore;
+import stream.api.entity.Customer;
+import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.hasItems;
@@ -25,7 +23,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a list of customer names by using {@link Stream#collect} and {@link Collectors#toList}
+         * Create a list of customer names by using {@link java.util.stream.Stream#collect} and {@link java.util.stream.Collectors#toList}
          */
         List<String> nameList = null;
 
@@ -38,7 +36,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a set of customer age by using {@link Stream#collect} and {@link Collectors#toSet}
+         * Create a set of customer age by using {@link java.util.stream.Stream#collect} and {@link java.util.stream.Collectors#toSet}
          */
         Set<Integer> ageSet = null;
 
@@ -51,7 +49,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a csv string of customer names in brackets "[]" by using {@link Collectors#joining}
+         * Create a csv string of customer names in brackets "[]" by using {@link java.util.stream.Collectors#joining}
          */
         String string = null;
 
@@ -63,7 +61,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Get the oldest customer by using {@link Collectors#maxBy}.
+         * Get the oldest customer by using {@link java.util.stream.Collectors#maxBy}.
          * Don't use any intermediate operations.
          */
         Optional<Customer> oldestCustomer = null;
@@ -77,7 +75,7 @@ public class Exercise5Test extends ClassicOnlineStore {
 
         /**
          * Create a map of age as key and number of customers as value
-         * using {@link Collectors#groupingBy} and {@link Collectors#counting}
+         * using {@link java.util.stream.Collectors#groupingBy} and {@link java.util.stream.Collectors#counting}
          */
         Map<Integer, Long> ageDistribution = null;
 

@@ -1,4 +1,4 @@
-package stream.api.code.kata.entity;
+package stream.api.entity;
 
 import javax.xml.bind.annotation.XmlAttribute;
 

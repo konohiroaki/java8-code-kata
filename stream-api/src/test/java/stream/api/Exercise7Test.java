@@ -1,4 +1,4 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
@@ -6,11 +6,10 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
-import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.entity.Shop;
-import stream.api.code.kata.utils.ClassicOnlineStore;
+import stream.api.entity.Customer;
+import stream.api.entity.Shop;
+import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
@@ -22,8 +21,8 @@ public class Exercise7Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create {@link IntStream} with customer ages by using {@link Stream#mapToInt}
-         * Then calculate the average of ages by using {@link IntStream#average}
+         * Create {@link java.util.stream.IntStream} with customer ages by using {@link java.util.stream.Stream#mapToInt}
+         * Then calculate the average of ages by using {@link java.util.stream.IntStream#average}
          */
         IntStream ageStream = null;
         OptionalDouble average = null;
@@ -36,8 +35,8 @@ public class Exercise7Test extends ClassicOnlineStore {
         List<Shop> shopList = this.mall.getShopList();
 
         /**
-         * Create {@link LongStream} with all items' prices using {@link Stream#mapToLong}
-         * Then calculate the sum of prices using {@link LongStream#sum}
+         * Create {@link java.util.stream.LongStream} with all items' prices using {@link java.util.stream.Stream#mapToLong}
+         * Then calculate the sum of prices using {@link java.util.stream.LongStream#sum}
          */
         LongStream priceStream = null;
         long priceSum = 0;

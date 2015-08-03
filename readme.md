@@ -1,4 +1,4 @@
-## Stream API Code Kata
+## Java8 Code Kata
 
 ### What is Code Kata?
 
@@ -8,9 +8,9 @@ According to [www.codekatas.org](http://www.codekatas.org/)
 
 Also refer [codekata.com](http://codekata.com/)
 
-### What is Stream API Code Kata?
+### What is Java8 Code Kata?
 
-The _Stream API Code Kata_ is created to walk-through java stream API functions. I hope this helps you learn Stream API and get used to it. Repeating exercises will definitely upgrade your Stream API skills.
+The _Java8 Code Kata_ is created to walk-through java8 new API functions. I hope this helps you learn Java8 and get used to it. Repeating exercises will definitely upgrade your skills.
 
 ### Usage
 
@@ -20,7 +20,9 @@ Edit the unit tests to pass them by following its description.
 
 Check the 'solution' branch, but please try to solve by yourself at first.
 
-### Chapters
+### Modules
+
+#### stream-api
 
 + Exercise1Test.java
 

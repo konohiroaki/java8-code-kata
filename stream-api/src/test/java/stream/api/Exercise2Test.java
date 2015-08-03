@@ -1,4 +1,4 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
@@ -8,13 +8,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.entity.Item;
-import stream.api.code.kata.utils.ClassicOnlineStore;
+import stream.api.entity.Customer;
+import stream.api.entity.Item;
+import stream.api.utils.ClassicOnlineStore;
+import stream.api.utils.AssertUtil;
 
 import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.*;
-import static stream.api.code.kata.utils.AssertUtil.isLambda;
 
 public class Exercise2Test extends ClassicOnlineStore {
 
@@ -24,7 +24,7 @@ public class Exercise2Test extends ClassicOnlineStore {
 
         /**
          * Create a stream with ascending ordered age values.
-         * Use {@link Stream#sorted} to sort them.
+         * Use {@link java.util.stream.Stream#sorted} to sort them.
          */
         Stream<Integer> sortedAgeStream = null;
 
@@ -42,7 +42,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         Comparator<Integer> descOrder = null;
         Stream<Integer> sortedAgeStream = null;
 
-        assertTrue(isLambda(descOrder));
+        assertTrue(AssertUtil.isLambda(descOrder));
         List<Integer> sortedAgeList = sortedAgeStream.collect(Collectors.toList());
         assertThat(sortedAgeList, contains(38, 36, 35, 32, 28, 27, 26, 22, 22, 21));
     }
@@ -52,7 +52,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a stream with top 3 rich customers using {@link Stream#limit} to limit the size of the stream
+         * Create a stream with top 3 rich customers using {@link java.util.stream.Stream#limit} to limit the size of the stream
          */
         Stream<String> top3RichCustomerStream = null;
 
@@ -65,7 +65,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a stream with distinct age values using {@link Stream#distinct}
+         * Create a stream with distinct age values using {@link java.util.stream.Stream#distinct}
          */
         Stream<Integer> distinctAgeStream = null;
 
@@ -79,12 +79,12 @@ public class Exercise2Test extends ClassicOnlineStore {
 
         /**
          * Create a stream with items' names stored in {@link Customer.wantToBuy}
-         * Use {@link Stream#flatMap} to create a stream from each element of a stream.
+         * Use {@link java.util.stream.Stream#flatMap} to create a stream from each element of a stream.
          */
         Function<Customer, Stream<Item>> getItemStream = null;
         Stream<String> itemStream = null;
 
-        assertTrue(isLambda(getItemStream));
+        assertTrue(AssertUtil.isLambda(getItemStream));
         List<String> itemList = itemStream.collect(Collectors.toList());
         assertThat(itemList,
                    contains("small table", "plate", "fork", "ice cream", "screwdriver", "cable", "earphone", "onion",
