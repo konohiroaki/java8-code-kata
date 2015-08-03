@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
+import java.util.stream.Stream;
 
 import stream.api.entity.Customer;
 import stream.api.entity.Item;
