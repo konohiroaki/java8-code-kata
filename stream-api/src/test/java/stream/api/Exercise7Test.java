@@ -1,4 +1,4 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
@@ -6,12 +6,11 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
-import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.entity.Item;
-import stream.api.code.kata.entity.Shop;
-import stream.api.code.kata.utils.ClassicOnlineStore;
+import stream.api.entity.Customer;
+import stream.api.entity.Item;
+import stream.api.entity.Shop;
+import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;

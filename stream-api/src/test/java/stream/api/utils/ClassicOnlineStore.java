@@ -1,10 +1,10 @@
-package stream.api.code.kata.utils;
+package stream.api.utils;
 
 import java.io.File;
 
 import javax.xml.bind.JAXB;
 
-import stream.api.code.kata.entity.OnlineShoppingMall;
+import stream.api.entity.OnlineShoppingMall;
 
 public class ClassicOnlineStore {
 

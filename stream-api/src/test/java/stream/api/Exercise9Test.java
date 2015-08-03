@@ -1,4 +1,4 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
@@ -17,9 +17,9 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.utils.ClassicOnlineStore;
-import stream.api.code.kata.utils.CollectorImpl;
+import stream.api.entity.Customer;
+import stream.api.utils.ClassicOnlineStore;
+import stream.api.utils.CollectorImpl;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
@@ -32,7 +32,7 @@ public class Exercise9Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Implement a {@link Collector} which can create a String with comma separated names shown in the assertion.
+         * Implement a {@link java.util.stream.Collector} which can create a String with comma separated names shown in the assertion.
          * The collector will be used by serial stream.
          */
         Supplier<StringJoiner> supplier = () -> new StringJoiner(",", "", "");
@@ -51,8 +51,8 @@ public class Exercise9Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Implement a {@link Collector} which can create a {@link Map} with keys as item and
-         * values as {@link Set} of customers who are wanting to buy that item.
+         * Implement a {@link java.util.stream.Collector} which can create a {@link java.util.Map} with keys as item and
+         * values as {@link java.util.Set} of customers who are wanting to buy that item.
          * The collector will be used by parallel stream.
          */
         Supplier<Map<String, Set<String>>> supplier = HashMap::new;

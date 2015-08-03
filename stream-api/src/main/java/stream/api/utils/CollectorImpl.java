@@ -1,4 +1,4 @@
-package stream.api.code.kata.utils;
+package stream.api.utils;
 
 import java.util.Set;
 import java.util.function.BiConsumer;

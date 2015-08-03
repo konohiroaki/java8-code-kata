@@ -1,4 +1,4 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
@@ -14,7 +14,7 @@ public class Exercise6Test {
     @Test
     public void streamFromValues() {
         /**
-         * Create a stream with string values "a" "b" "c" by using {@link Stream#of}
+         * Create a stream with string values "a" "b" "c" by using {@link java.util.stream.Stream#of}
          */
         Stream<String> abcStream = Stream.of("a", "b", "c");
 
@@ -25,7 +25,7 @@ public class Exercise6Test {
     @Test
     public void numberStream() {
         /**
-         * Create a stream only with multiples of 3, starting from 0, size of 10, by using {@link Stream#iterate}
+         * Create a stream only with multiples of 3, starting from 0, size of 10, by using {@link java.util.stream.Stream#iterate}
          */
         Stream<Integer> numbers = Stream.iterate(0, ele -> ele + 3).limit(10);
 

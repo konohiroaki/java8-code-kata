@@ -1,4 +1,4 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
@@ -8,13 +8,13 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.utils.ClassicOnlineStore;
+import stream.api.entity.Customer;
+import stream.api.utils.ClassicOnlineStore;
+import stream.api.utils.AssertUtil;
 
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.*;
-import static stream.api.code.kata.utils.AssertUtil.isLambda;
 
 public class Exercise1Test extends ClassicOnlineStore {
 
@@ -29,7 +29,7 @@ public class Exercise1Test extends ClassicOnlineStore {
         Predicate<Customer> richCustomerCondition = customer -> customer.getBudget() > 10000;
         Stream<Customer> richCustomerStream = customerList.stream().filter(richCustomerCondition);
 
-        assertTrue("Solution for Predicate should be lambda expression", isLambda(richCustomerCondition));
+        assertTrue("Solution for Predicate should be lambda expression", AssertUtil.isLambda(richCustomerCondition));
         List<Customer> richCustomer = richCustomerStream.collect(Collectors.toList());
         assertThat(richCustomer, hasSize(2));
         assertThat(richCustomer, contains(customerList.get(3), customerList.get(7)));
@@ -40,14 +40,14 @@ public class Exercise1Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a {@link Stream} from customerList with age values.
-         * Use method reference(best) or lambda expression(okay) for creating {@link Function} which will
-         * convert {@link Customer} to {@link Integer}, and then apply it by using {@link Stream#map}.
+         * Create a {@link java.util.stream.Stream} from customerList with age values.
+         * Use method reference(best) or lambda expression(okay) for creating {@link java.util.function.Function} which will
+         * convert {@link Customer} to {@link Integer}, and then apply it by using {@link java.util.stream.Stream#map}.
          */
         Function<Customer, Integer> getAgeFunction = Customer::getAge;
         Stream<Integer> ageStream = customerList.stream().map(getAgeFunction);
 
-        assertTrue(isLambda(getAgeFunction));
+        assertTrue(AssertUtil.isLambda(getAgeFunction));
         List<Integer> richCustomer = ageStream.collect(Collectors.toList());
         assertThat(richCustomer, hasSize(10));
         assertThat(richCustomer, contains(22, 27, 28, 38, 26, 22, 32, 35, 21, 36));

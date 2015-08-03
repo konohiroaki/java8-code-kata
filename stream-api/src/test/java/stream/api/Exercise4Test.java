@@ -1,13 +1,12 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.utils.ClassicOnlineStore;
+import stream.api.entity.Customer;
+import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
@@ -19,7 +18,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Find the first customer who registered this online store by using {@link Stream#findFirst}
+         * Find the first customer who registered this online store by using {@link java.util.stream.Stream#findFirst}
          * The customerList are ascending ordered by registered timing.
          */
         Optional<Customer> firstCustomer = customerList.stream().findFirst();
@@ -32,7 +31,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Check whether any customer older than 40 exists or not, by using {@link Stream#anyMatch}
+         * Check whether any customer older than 40 exists or not, by using {@link java.util.stream.Stream#anyMatch}
          */
         boolean olderThan40Exists = customerList.stream().anyMatch(customer -> customer.getAge() > 40);
 
@@ -44,7 +43,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Check whether all customer are older than 20 or not, by using {@link Stream#allMatch}
+         * Check whether all customer are older than 20 or not, by using {@link java.util.stream.Stream#allMatch}
          */
         boolean allOlderThan20 = customerList.stream().allMatch(customer -> customer.getAge() > 20);
 
@@ -57,7 +56,7 @@ public class Exercise4Test extends ClassicOnlineStore {
 
         /**
          * Confirm that none of the customer has empty list for their {@link Customer.wantToBuy}
-         * by using {@link Stream#noneMatch}
+         * by using {@link java.util.stream.Stream#noneMatch}
          */
         boolean everyoneWantsSomething = customerList.stream().noneMatch(customer -> customer.getWantToBuy().isEmpty());
 

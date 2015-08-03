@@ -1,14 +1,13 @@
-package stream.api.code.kata;
+package stream.api;
 
 import org.junit.Test;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
-import stream.api.code.kata.entity.Customer;
-import stream.api.code.kata.utils.ClassicOnlineStore;
+import stream.api.entity.Customer;
+import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
@@ -20,7 +19,7 @@ public class Exercise3Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Count how many items there are in {@link Customer.wantToBuy} using {@link Stream#count}
+         * Count how many items there are in {@link Customer.wantToBuy} using {@link java.util.stream.Stream#count}
          */
         long sum = customerList.stream().flatMap(customer -> customer.getWantToBuy().stream()).count();
 
@@ -32,8 +31,8 @@ public class Exercise3Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Find the richest customer's budget by using {@link Stream#max} and {@link Comparator#naturalOrder}
-         * Don't use {@link Stream#sorted}
+         * Find the richest customer's budget by using {@link java.util.stream.Stream#max} and {@link java.util.Comparator#naturalOrder}
+         * Don't use {@link java.util.stream.Stream#sorted}
          */
         Comparator<Integer> comparator = Comparator.naturalOrder();
         Optional<Integer> richestCustomer = customerList.stream().map(Customer::getBudget).max(comparator);
@@ -47,8 +46,8 @@ public class Exercise3Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Find the youngest customer by using {@link Stream#min}
-         * Don't use {@link Stream#sorted}
+         * Find the youngest customer by using {@link java.util.stream.Stream#min}
+         * Don't use {@link java.util.stream.Stream#sorted}
          */
         Comparator<Customer> comparator = (customer1, customer2) -> customer1.getAge() - customer2.getAge();;
         Optional<Customer> youngestCustomer = customerList.stream().min(comparator);
