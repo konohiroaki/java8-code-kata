@@ -87,6 +87,7 @@ public class Exercise1Test extends ClassicOnlineStore {
 
         /**
          * Create a serial {@link Stream} using {@link Collection#stream}
+         * You can learn about {@link Stream} APIs at stream-api module.
          */
         Stream<Object> nameStream = null;
 
