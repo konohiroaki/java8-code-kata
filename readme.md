@@ -22,6 +22,12 @@ Check the 'solution' branch, but please try to solve by yourself at first.
 
 ### Modules
 
+#### collection-interfaces
+
++ Exercise1Test.java
+
+`Iterable#forEach`, `Collection#removeIf`, `List#replaceAll`, `List#sort`, `Collection#stream` and `Collection#parallelStream`
+
 #### stream-api
 
 + Exercise1Test.java
