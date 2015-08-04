@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mall>
+    <shops>
+        <shop name="White Furniture">
+            <item name="chair" price="2000"/>
+            <item name="table" price="5500"/>
+            <item name="small chair" price="1800"/>
+            <item name="small table" price="2800"/>
+        </shop>
+        <shop name="Dish Devices">
+            <item name="cup" price="380"/>
+            <item name="plate" price="680"/>
+            <item name="fork" price="210"/>
+            <item name="spoon" price="210"/>
+            <item name="chopsticks" price="180"/>
+        </shop>
+        <shop name="The Do It Ourselves">
+            <item name="rope" price="800"/>
+            <item name="saw" price="1400"/>
+            <item name="bond" price="480"/>
+            <item name="plane" price="2200"/>
+            <item name="screwdriver" price="600"/>
+        </shop>
+        <shop name="Electrics">
+            <item name="chair" price="600"/>
+            <item name="desk" price="1800"/>
+            <item name="cable" price="230"/>
+            <item name="speaker" price="19000"/>
+            <item name="headphone" price="8800"/>
+            <item name="earphone" price="7800"/>
+        </shop>
+        <shop name="Amazing Apothecary">
+            <item name="cold medicine" price="800"/>
+            <item name="ointment" price="500"/>
+            <item name="eye-drops" price="600"/>
+            <item name="poultice" price="900"/>
+        </shop>
+        <shop name="The Rapid Supermarket">
+            <item name="spinach" price="100"/>
+            <item name="ginseng" price="120"/>
+            <item name="onion" price="160"/>
+            <item name="ice cream" price="200"/>
+            <item name="crisps" price="80"/>
+        </shop>
+    </shops>
+    <customers>
+        <customer name="Joe" age="22" budget="8000">
+            <item name="small table"/>
+            <item name="plate"/>
+            <item name="fork"/>
+        </customer>
+        <customer name="Steven" age="27" budget="2000">
+            <item name="ice cream"/>
+            <item name="screwdriver"/>
+            <item name="cable"/>
+            <item name="earphone"/>
+        </customer>
+        <customer name="Patrick" age="28" budget="4000">
+            <item name="onion"/>
+            <item name="ice cream"/>
+            <item name="crisps"/>
+            <item name="chopsticks"/>
+        </customer>
+        <customer name="Diana" age="38" budget="12000">
+            <item name="cable"/>
+            <item name="speaker"/>
+            <item name="headphone"/>
+        </customer>
+        <customer name="Chris" age="26" budget="9000">
+            <item name="saw"/>
+            <item name="bond"/>
+            <item name="plane"/>
+            <item name="bag"/>
+        </customer>
+        <customer name="Kathy" age="22" budget="6000">
+            <item name="cold medicine"/>
+        </customer>
+        <customer name="Alice" age="32" budget="2500">
+            <item name="chair"/>
+            <item name="desk"/>
+        </customer>
+        <customer name="Andrew" age="35" budget="11000">
+            <item name="pants"/>
+            <item name="coat"/>
+        </customer>
+        <customer name="Martin" age="21" budget="1000">
+            <item name="cup"/>
+            <item name="plate"/>
+            <item name="fork"/>
+            <item name="spoon"/>
+        </customer>
+        <customer name="Amy" age="36" budget="2000">
+            <item name="ointment"/>
+            <item name="poultice"/>
+            <item name="spinach"/>
+            <item name="ginseng"/>
+            <item name="onion"/>
+        </customer>
+    </customers>
+</mall>
