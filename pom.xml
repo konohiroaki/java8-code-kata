@@ -7,8 +7,9 @@
     <groupId>java8-code-kata</groupId>
     <artifactId>java8-code-kata</artifactId>
     <packaging>pom</packaging>
-    <version>1.1</version>
+    <version>2.1</version>
     <modules>
+        <module>collection-interfaces</module>
         <module>stream-api</module>
     </modules>
 
