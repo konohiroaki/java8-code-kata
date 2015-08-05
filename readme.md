@@ -28,6 +28,10 @@ Check the 'solution' branch, but please try to solve by yourself at first.
 
 `Iterable#forEach`, `Collection#removeIf`, `List#replaceAll`, `List#sort`, `Collection#stream` and `Collection#parallelStream`
 
++ Exercise2Test.java
+
+`Map#getOrDefault`, `Map#putIfAbsent`, `Map#merge` and `Map#computeIfPresent`
+
 #### stream-api
 
 + Exercise1Test.java
