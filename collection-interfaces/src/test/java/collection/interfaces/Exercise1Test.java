@@ -30,7 +30,7 @@ public class Exercise1Test extends ClassicOnlineStore {
          * Iterate {@link customerIterable} with {@link Iterable#forEach} and use the {@link Consumer}
          * to finish creating the name list.
          */
-        Consumer<Customer> consumer = (customer) -> nameList.add(customer.getName());
+        Consumer<Customer> consumer = customer -> nameList.add(customer.getName());
         customerIterable.forEach(consumer);
 
         assertThat(nameList.toString(), is("[Joe, Steven, Patrick, Diana, Chris, Kathy, Alice, Andrew, Martin, Amy]"));
@@ -45,7 +45,7 @@ public class Exercise1Test extends ClassicOnlineStore {
          * Create a {@link Predicate} which predicates whether the input string containing string "e".
          * Remove elements from {@link nameCollection} which
          */
-        Predicate<String> predicate = (name) -> name.contains("e");
+        Predicate<String> predicate = name -> name.contains("e");
         nameCollection.removeIf(predicate);
 
         assertThat(nameCollection.toString(), is("[Patrick, Chris]"));
