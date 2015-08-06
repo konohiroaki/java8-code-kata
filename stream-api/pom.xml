@@ -11,4 +11,10 @@
 
     <artifactId>stream-api</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>java8-code-kata</groupId>
+            <artifactId>common-test-tool</artifactId>
+        </dependency>
+    </dependencies>
 </project>
