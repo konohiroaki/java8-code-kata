@@ -1,5 +1,8 @@
 package stream.api;
 
+import common.test.tool.dataset.ClassicOnlineStore;
+import common.test.tool.entity.Customer;
+
 import org.junit.Test;
 
 import java.util.List;
@@ -7,9 +10,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import stream.api.entity.Customer;
-import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.hasItems;

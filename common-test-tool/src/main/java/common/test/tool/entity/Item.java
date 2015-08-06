@@ -1,4 +1,4 @@
-package stream.api.entity;
+package common.test.tool.entity;
 
 import javax.xml.bind.annotation.XmlAttribute;
 

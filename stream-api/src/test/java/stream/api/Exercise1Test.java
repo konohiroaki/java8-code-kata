@@ -1,5 +1,9 @@
 package stream.api;
 
+import common.test.tool.dataset.ClassicOnlineStore;
+import common.test.tool.entity.Customer;
+import common.test.tool.util.AssertUtil;
+
 import org.junit.Test;
 
 import java.util.List;
@@ -8,13 +12,11 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import stream.api.entity.Customer;
-import stream.api.utils.ClassicOnlineStore;
-import stream.api.utils.AssertUtil;
-
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.*;
+
+;
 
 public class Exercise1Test extends ClassicOnlineStore {
 

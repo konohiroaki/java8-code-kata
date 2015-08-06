@@ -1,5 +1,10 @@
 package stream.api;
 
+import common.test.tool.dataset.ClassicOnlineStore;
+import common.test.tool.entity.Customer;
+import common.test.tool.entity.Item;
+import common.test.tool.entity.Shop;
+
 import org.junit.Test;
 
 import java.util.List;
@@ -7,11 +12,6 @@ import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
-
-import stream.api.entity.Customer;
-import stream.api.entity.Item;
-import stream.api.entity.Shop;
-import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;

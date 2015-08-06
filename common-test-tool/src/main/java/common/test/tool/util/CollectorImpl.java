@@ -1,4 +1,4 @@
-package stream.api.utils;
+package common.test.tool.util;
 
 import java.util.Set;
 import java.util.function.BiConsumer;
