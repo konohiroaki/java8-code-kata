@@ -1,4 +1,4 @@
-package collection.interfaces.entity;
+package common.test.tool.entity;
 
 import java.util.List;
 

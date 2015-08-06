@@ -1,5 +1,8 @@
 package stream.api;
 
+import common.test.tool.dataset.ClassicOnlineStore;
+import common.test.tool.entity.Customer;
+
 import org.junit.Test;
 
 import java.util.Collections;
@@ -13,9 +16,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
 
-import stream.api.entity.Customer;
-import stream.api.utils.ClassicOnlineStore;
-import stream.api.utils.CollectorImpl;
+import common.test.tool.util.CollectorImpl;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;

@@ -1,5 +1,8 @@
 package collection.interfaces;
 
+import common.test.tool.dataset.ClassicOnlineStore;
+import common.test.tool.entity.Customer;
+
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -11,9 +14,6 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
-
-import collection.interfaces.entity.Customer;
-import collection.interfaces.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;

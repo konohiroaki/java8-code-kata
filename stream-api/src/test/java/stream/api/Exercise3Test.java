@@ -1,13 +1,13 @@
 package stream.api;
 
+import common.test.tool.dataset.ClassicOnlineStore;
+import common.test.tool.entity.Customer;
+
 import org.junit.Test;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-
-import stream.api.entity.Customer;
-import stream.api.utils.ClassicOnlineStore;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
