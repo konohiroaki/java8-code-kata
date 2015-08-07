@@ -6,8 +6,10 @@ import common.test.tool.util.CollectorImpl;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.List;
@@ -101,7 +103,63 @@ public class Exercise9Test extends ClassicOnlineStore {
         /**
          * Create a bit string of "n"th bit on. "7,1-3,5" will be "1110101"
          */
-        Collector<String, ?, String> toBitString = null;
+        Collector<String, ?, String> toBitString = new Collector<String, List<Integer>, String>() {
+            @Override public Supplier<List<Integer>> supplier() {
+                return ArrayList::new;
+            }
+
+            @Override public BiConsumer<List<Integer>, String> accumulator() {
+                return (list, str) -> {
+                    List<String> splitString = Arrays.asList(str.split("-"));
+                    List<Integer> splitInt = splitString.stream().map(Integer::valueOf).collect(Collectors.toList());
+                    if (splitInt.size() > 1) {
+                        list.addAll(Stream.iterate(splitInt.get(0), e -> ++e)
+                                        .limit(splitInt.get(1) - splitInt.get(0) + 1)
+                                        .collect(Collectors.toList()));
+                    } else {
+                        list.add(splitInt.get(0));
+                    }
+                };
+            }
+
+            @Override public BinaryOperator<List<Integer>> combiner() {
+                return null;
+            }
+
+            @Override public Function<List<Integer>, String> finisher() {
+                return list -> {
+                    long max = list.stream().max(Comparator.naturalOrder()).get();
+                    return list.stream().distinct().collect(
+                        new Collector<Integer, List<String>, String>() {
+                            @Override public Supplier<List<String>> supplier() {
+                                return () -> Stream.generate(() -> "0")
+                                    .limit(max)
+                                    .collect(Collectors.toList());
+                            }
+
+                            @Override public BiConsumer<List<String>, Integer> accumulator() {
+                                return (strList, nth) -> strList.set(nth - 1, "1");
+                            }
+
+                            @Override public BinaryOperator<List<String>> combiner() {
+                                return null;
+                            }
+
+                            @Override public Function<List<String>, String> finisher() {
+                                return strList -> strList.stream().collect(Collectors.joining());
+                            }
+
+                            @Override public Set<Characteristics> characteristics() {
+                                return Collections.emptySet();
+                            }
+                        });
+                };
+            }
+
+            @Override public Set<Characteristics> characteristics() {
+                return Collections.emptySet();
+            }
+        };
 
         String bitString = Arrays.stream(bitList.split(",")).collect(toBitString);
         assertThat(bitString, is("01011000101001111000011100000000100001110111010101")
