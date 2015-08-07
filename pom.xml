@@ -9,9 +9,9 @@
     <packaging>pom</packaging>
     <version>2.1</version>
     <modules>
+        <module>common-test-tool</module>
         <module>collection-interfaces</module>
         <module>stream-api</module>
-        <module>common-test-tool</module>
     </modules>
 
     <properties>

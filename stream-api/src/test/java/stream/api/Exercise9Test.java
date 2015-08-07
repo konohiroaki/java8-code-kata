@@ -2,9 +2,11 @@ package stream.api;
 
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
+import common.test.tool.util.CollectorImpl;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.EnumSet;
 import java.util.List;
@@ -15,8 +17,6 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
-
-import common.test.tool.util.CollectorImpl;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
@@ -70,5 +70,20 @@ public class Exercise9Test extends ClassicOnlineStore {
         assertThat(itemMap.get("fork"), containsInAnyOrder("Joe", "Martin"));
         assertThat(itemMap.get("cable"), containsInAnyOrder("Diana", "Steven"));
         assertThat(itemMap.get("desk"), containsInAnyOrder("Alice"));
+    }
+
+    @Test
+    public void bitList2BitString() {
+        String bitList = "22-24,9,42-44,11,4,46,14-17,5,2,38-40,33,50,48";
+
+        /**
+         * Create a bit string of "n"th bit on. "7,1-3,5" will be "1110101"
+         */
+        Collector<String, ?, String> toBitString = null;
+
+        String bitString = Arrays.stream(bitList.split(",")).collect(toBitString);
+        assertThat(bitString, is("01011000101001111000011100000000100001110111010101")
+
+        );
     }
 }
