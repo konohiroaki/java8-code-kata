@@ -19,7 +19,7 @@ public class Exercise1Test {
         /**
          * Create a {@link LocalDate} of 2015-06-18 by using {@link LocalDate#of}
          */
-        LocalDate localDate = null;
+        LocalDate localDate = LocalDate.of(2015, Month.JUNE, 18); // or LocalDate.of(2015, 6, 18);
 
         assertThat(localDate.toString(), is("2015-06-18"));
     }
@@ -29,7 +29,7 @@ public class Exercise1Test {
         /**
          * Create a {@link LocalDate} of 2015-06-18 from String by using {@link LocalDate#parse}
          */
-        LocalDate localDate = null;
+        LocalDate localDate = LocalDate.parse("2015-06-18");
 
         assertThat(localDate.toString(), is("2015-06-18"));
     }
@@ -42,7 +42,7 @@ public class Exercise1Test {
          * Create a {@link LocalDate} from {@link ld} with year 2015
          * by using {@link LocalDate#withYear} or {@link LocalDate#with}
          */
-        LocalDate localDate = null;
+        LocalDate localDate = ld.withYear(2015); // or ld.with(ChronoField.YEAR, 2015);
 
         assertThat(localDate.getYear(), is(2015));
         assertThat(localDate.getMonth(), is(ld.getMonth()));
@@ -57,7 +57,7 @@ public class Exercise1Test {
          * Create a {@link LocalDate} from {@link ld} adjusted into first day of next year
          * by using {@link LocalDate#with} and {@link TemporalAdjusters#firstDayOfNextYear}
          */
-        LocalDate localDate = null;
+        LocalDate localDate = ld.with(TemporalAdjusters.firstDayOfNextYear());
 
         assertThat(localDate.getYear(), is(ld.getYear() + 1));
         assertThat(localDate.getMonth(), is(Month.JANUARY));
@@ -72,7 +72,7 @@ public class Exercise1Test {
          * Create a {@link LocalDate} from {@link ld} with 10 month later
          * by using {@link LocalDate#plusDays} or {@link LocalDate#plus}
          */
-        LocalDate localDate = null;
+        LocalDate localDate = ld.plusMonths(10); // or ld.plus(10, ChronoUnit.MONTHS);
 
         assertThat(localDate.getYear(), is(ld.getYear() + 1));
         assertThat(localDate.getMonth(), is(Month.APRIL));
@@ -87,7 +87,7 @@ public class Exercise1Test {
          * Create a {@link LocalDate} from {@link ld} with 10 days before
          * by using {@link LocalDate#minusDays} or {@link LocalDate#minus}
          */
-        LocalDate localDate = null;
+        LocalDate localDate = ld.minusDays(10); // or ld.minus(10, ChronoUnit.DAYS);
 
         assertThat(localDate.getYear(), is(ld.getYear()));
         assertThat(localDate.getMonth(), is(ld.getMonth()));
@@ -103,8 +103,8 @@ public class Exercise1Test {
          * Define a {@link Period} of 1 year 2 month 3 days
          * Create a {@link LocalDate} adding the period to {@link ld} by using {@link LocalDate#plus}
          */
-        Period period = null;
-        LocalDate localDate = null;
+        Period period = Period.of(1, 2, 3);
+        LocalDate localDate = ld.plus(period);
 
         assertThat(localDate.getYear(), is(ld.getYear() + 1));
         assertThat(period.getMonths(), is(2));
@@ -120,7 +120,7 @@ public class Exercise1Test {
          * Check whether {@link ld2} is after {@link ld} or not
          * by using {@link LocalDate#isAfter} or {@link LocalDate#isBefore}
          */
-        boolean isAfter0618 = false;
+        boolean isAfter0618 = ld2.isAfter(ld); // or ld.isBefore(ld2);
 
         assertThat(isAfter0618, is(true));
     }
@@ -134,7 +134,7 @@ public class Exercise1Test {
          * Create a period from {@link ld} till {@link ld2}
          * by using {@link LocalDate#until}
          */
-        Period period = null;
+        Period period = ld.until(ld2);
 
         assertThat(period.getYears(), is(0));
         assertThat(period.getMonths(), is(1));
