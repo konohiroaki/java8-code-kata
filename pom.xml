@@ -12,6 +12,7 @@
         <module>common-test-tool</module>
         <module>collection-interfaces</module>
         <module>stream-api</module>
+        <module>date-and-time-api</module>
     </modules>
 
     <properties>
