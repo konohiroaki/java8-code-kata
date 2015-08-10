@@ -69,3 +69,9 @@ Advanced problems
 + Exercise9Test.java
 
 `Collector`
+
+#### date-and-time-api
+
++ Exercise1Test.java
+
+`LocalDate#of`, `LocalDate#parse`, `LocalDate#with`, `LocalDate#plus`, `LocalDate#minus`, `LocalDate#isAfter`, `LocalDate#isBefore` and `LocalDate#until`
