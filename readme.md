@@ -79,3 +79,7 @@ Advanced problems
 + Exercise2Test.java
 
 `LocalTime#of`, `LocalTime#parse`, `LocalTime#with`, `LocalTime#plus`, `LocalTime#minus`, `LocalTime#isAfter`, `LocalTime#isBefore` and `LocalTime#truncatedTo`
+
++ Exercise3Test.java
+
+`LocalDateTime#of`, `LocalDateTime#parse`, `LocalDateTime#format`, `LocalDateTime#toLocalDate`, `LocalDateTime#toLocalTime`
