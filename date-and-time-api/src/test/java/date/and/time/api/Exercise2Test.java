@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.time.Duration;
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
@@ -17,7 +18,7 @@ public class Exercise2Test {
         /**
          * Create a {@link LocalTime} of 23:07 by using {@link LocalTime#of}
          */
-        LocalTime localTime = null;
+        LocalTime localTime = LocalTime.of(23, 7);
 
         assertThat(localTime.toString(), is("23:07"));
     }
@@ -27,7 +28,7 @@ public class Exercise2Test {
         /**
          * Create a {@link LocalTime} of 23:07:03.1 by using {@link LocalTime#of}
          */
-        LocalTime localTime = null;
+        LocalTime localTime = LocalTime.of(23, 7, 3, 100000000);
 
         assertThat(localTime.toString(), is("23:07:03.100"));
     }
@@ -37,7 +38,7 @@ public class Exercise2Test {
         /**
          * Create a {@link LocalTime} of 23:07:03.1 from String by using {@link LocalTime#parse}
          */
-        LocalTime localTime = null;
+        LocalTime localTime = LocalTime.parse("23:07:03.1");
 
         assertThat(localTime.toString(), is("23:07:03.100"));
     }
@@ -50,7 +51,7 @@ public class Exercise2Test {
          * Create a {@link LocalTime} from {@link lt} with hour 21
          * by using {@link LocalTime#withHour} or {@link LocalTime#with}
          */
-        LocalTime localTime = null;
+        LocalTime localTime = lt.withHour(21); // or lt.with(ChronoField.HOUR_OF_DAY, 21);
 
         assertThat(localTime.getHour(), is(21));
         assertThat(localTime.getMinute(), is(lt.getMinute()));
@@ -65,7 +66,7 @@ public class Exercise2Test {
          * Create a {@link LocalTime} from {@link lt} with 30 minutes later
          * by using {@link LocalTime#plusMinutes} or {@link LocalTime#plus}
          */
-        LocalTime localTime = null;
+        LocalTime localTime = lt.plusMinutes(30); // or lt.plus(30, ChronoUnit.MINUTES);
 
         assertThat(localTime.getHour(), is(lt.getHour()));
         assertThat(localTime.getMinute(), is(lt.getMinute() + 30));
@@ -80,7 +81,7 @@ public class Exercise2Test {
          * Create a {@link LocalTime} from {@link lt} with 3 hours before
          * by using {@link LocalTime#minusHours} or {@link LocalTime#minus}
          */
-        LocalTime localTime = null;
+        LocalTime localTime = lt.minusHours(3); // or lt.minus(3, ChronoUnit.HOURS);
 
         assertThat(localTime.getHour(), is(lt.getHour() - 3));
         assertThat(localTime.getMinute(), is(lt.getMinute()));
@@ -96,8 +97,8 @@ public class Exercise2Test {
          * Define a {@link Duration} of 3 hours 30 minutes and 20.2 seconds
          * Create a {@link LocalTime} subtracting the duration from {@link lt} by using {@link LocalTime#minus}
          */
-        Duration duration = null;
-        LocalTime localTime = null;
+        Duration duration = Duration.ofSeconds(3 * 3600 + 30 * 60 + 20, 200 * 1000 * 1000);
+        LocalTime localTime = lt.minus(duration);
 
         assertThat(localTime.getHour(), is(19));
         assertThat(localTime.getMinute(), is(37));
@@ -116,7 +117,7 @@ public class Exercise2Test {
          * Check whether {@link lt2} is before {@link lt} or not
          * by using {@link LocalTime#isAfter} or {@link LocalTime#isBefore}
          */
-        boolean isBefore2307 = false;
+        boolean isBefore2307 = lt2.isBefore(lt);
 
         assertThat(isBefore2307, is(true));
     }
@@ -128,7 +129,7 @@ public class Exercise2Test {
         /**
          * Create a {@link LocalTime} from {@link lt} truncated to minutes by using {@link LocalTime#truncatedTo}
          */
-        LocalTime localTime = null;
+        LocalTime localTime = lt.truncatedTo(ChronoUnit.MINUTES);
 
         assertThat(lt.toString(), is("23:07:30.500"));
         assertThat(localTime.toString(), is("23:07"));
