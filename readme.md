@@ -80,6 +80,6 @@ Advanced problems
 
 `LocalTime#of`, `LocalTime#parse`, `LocalTime#with`, `LocalTime#plus`, `LocalTime#minus`, `LocalTime#isAfter`, `LocalTime#isBefore` and `LocalTime#truncatedTo`
 
-+ Exercise2Test.java
++ Exercise3Test.java
 
 `LocalDateTime#of`, `LocalDateTime#parse`, `LocalDateTime#format`, `LocalDateTime#toLocalDate`, `LocalDateTime#toLocalTime`
