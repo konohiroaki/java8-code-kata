@@ -75,3 +75,7 @@ Advanced problems
 + Exercise1Test.java
 
 `LocalDate#of`, `LocalDate#parse`, `LocalDate#with`, `LocalDate#plus`, `LocalDate#minus`, `LocalDate#isAfter`, `LocalDate#isBefore` and `LocalDate#until`
+
++ Exercise2Test.java
+
+`LocalTime#of`, `LocalTime#parse`, `LocalTime#with`, `LocalTime#plus`, `LocalTime#minus`, `LocalTime#isAfter`, `LocalTime#isBefore` and `LocalTime#truncatedTo`
