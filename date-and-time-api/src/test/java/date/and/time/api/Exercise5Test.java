@@ -21,7 +21,7 @@ public class Exercise5Test {
 
     @Test
     public void localDateTime2Timestamp() {
-        LocalDateTime ldt = DateAndTimes.ldt_20150618_23073050;
+        LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
         /**
          * Create a {@link java.sql.Timestamp} from {@link ldt}
@@ -33,7 +33,7 @@ public class Exercise5Test {
 
     @Test
     public void localDate2date() {
-        LocalDate ld = DateAndTimes.ld_20150618;
+        LocalDate ld = DateAndTimes.LD_20150618;
 
         /**
          * Create a {@link java.sql.Date} from {@link ld}
@@ -45,7 +45,7 @@ public class Exercise5Test {
 
     @Test
     public void timestamp2LocalDateTime() {
-        Timestamp timestamp = DateAndTimes.old_timestamp_20150618_23073050;
+        Timestamp timestamp = DateAndTimes.OLD_TIMESTAMP_20150618_23073050;
 
         /**
          * Create a {@link LocalDateTime} from {@link timestamp}
@@ -57,7 +57,7 @@ public class Exercise5Test {
 
     @Test
     public void date2LocalDate() {
-        Date date = DateAndTimes.old_date_20150618;
+        Date date = DateAndTimes.OLD_DATE_20150618;
 
         /**
          * Create a {@link LocalDate} from {@link date}
