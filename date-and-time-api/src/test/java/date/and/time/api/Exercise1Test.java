@@ -36,7 +36,7 @@ public class Exercise1Test {
 
     @Test
     public void localDateWith() {
-        LocalDate ld = DateAndTimes.ld_20150618;
+        LocalDate ld = DateAndTimes.LD_20150618;
 
         /**
          * Create a {@link LocalDate} from {@link ld} with year 2015
@@ -51,7 +51,7 @@ public class Exercise1Test {
 
     @Test
     public void localDateWithAdjuster() {
-        LocalDate ld = DateAndTimes.ld_20150618;
+        LocalDate ld = DateAndTimes.LD_20150618;
 
         /**
          * Create a {@link LocalDate} from {@link ld} adjusted into first day of next year
@@ -66,7 +66,7 @@ public class Exercise1Test {
 
     @Test
     public void localDatePlus() {
-        LocalDate ld = DateAndTimes.ld_20150618;
+        LocalDate ld = DateAndTimes.LD_20150618;
 
         /**
          * Create a {@link LocalDate} from {@link ld} with 10 month later
@@ -81,7 +81,7 @@ public class Exercise1Test {
 
     @Test
     public void localDateMinus() {
-        LocalDate ld = DateAndTimes.ld_20150618;
+        LocalDate ld = DateAndTimes.LD_20150618;
 
         /**
          * Create a {@link LocalDate} from {@link ld} with 10 days before
@@ -97,7 +97,7 @@ public class Exercise1Test {
 
     @Test
     public void localDatePlusPeriod() {
-        LocalDate ld = DateAndTimes.ld_20150618;
+        LocalDate ld = DateAndTimes.LD_20150618;
 
         /**
          * Define a {@link Period} of 1 year 2 month 3 days
@@ -113,8 +113,8 @@ public class Exercise1Test {
 
     @Test
     public void localDateIsAfter() {
-        LocalDate ld = DateAndTimes.ld_20150618;
-        LocalDate ld2 = DateAndTimes.ld_20150807;
+        LocalDate ld = DateAndTimes.LD_20150618;
+        LocalDate ld2 = DateAndTimes.LD_20150807;
 
         /**
          * Check whether {@link ld2} is after {@link ld} or not
@@ -127,8 +127,8 @@ public class Exercise1Test {
 
     @Test
     public void localDateUntil() {
-        LocalDate ld = DateAndTimes.ld_20150618;
-        LocalDate ld2 = DateAndTimes.ld_20150807;
+        LocalDate ld = DateAndTimes.LD_20150618;
+        LocalDate ld2 = DateAndTimes.LD_20150807;
 
         /**
          * Create a period from {@link ld} till {@link ld2}

@@ -87,3 +87,7 @@ Advanced problems
 + Exercise4Test.java
 
 `ZonedDateTime#of`, `ZonedDateTime#parse`, `ZonedDateTime#format`, `LocalDateTime#atZone`, `ZonedDateTime#withZoneSameInstant` and `ZonedDateTime#withZoneSameLocal`
+
++ Exercise5Test.java
+
+`LocalDateTime` to `java.sql.Timestamp`, `LocalDate` to `java.sql.Date`,  and vice versa

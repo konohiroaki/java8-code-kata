@@ -38,7 +38,7 @@ public class Exercise4Test {
 
     @Test
     public void zonedDateTimeFormat() {
-        ZonedDateTime zdt = DateAndTimes.zdt_20150618_23073050;
+        ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 
         /**
          * Format {@link zdt} to a {@link String} as "2015_06_18_23_07_30_JST"
@@ -51,7 +51,7 @@ public class Exercise4Test {
 
     @Test
     public void toPST() {
-        LocalDateTime ldt = DateAndTimes.ldt_20150618_23073050;
+        LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
         /**
          * Create a {@link ZonedDateTime} from {@link ldt} with Pacific Standard Time
@@ -64,7 +64,7 @@ public class Exercise4Test {
 
     @Test
     public void sameInstantAs() {
-        ZonedDateTime zdt = DateAndTimes.zdt_20150618_23073050;
+        ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 
         /**
          * Create a {@link ZonedDateTime} same instant as {@link zdt} with Pacific Standard Time
@@ -77,7 +77,7 @@ public class Exercise4Test {
 
     @Test
     public void sameLocalAs() {
-        ZonedDateTime zdt = DateAndTimes.zdt_20150618_23073050;
+        ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 
         /**
          * Create a {@link ZonedDateTime} same local time as {@link zdt} with Pacific Standard Time

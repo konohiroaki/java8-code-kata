@@ -45,7 +45,7 @@ public class Exercise2Test {
 
     @Test
     public void localTimeWith() {
-        LocalTime lt = DateAndTimes.lt_23073050;
+        LocalTime lt = DateAndTimes.LT_23073050;
 
         /**
          * Create a {@link LocalTime} from {@link lt} with hour 21
@@ -60,7 +60,7 @@ public class Exercise2Test {
 
     @Test
     public void localTimePlus() {
-        LocalTime lt = DateAndTimes.lt_23073050;
+        LocalTime lt = DateAndTimes.LT_23073050;
 
         /**
          * Create a {@link LocalTime} from {@link lt} with 30 minutes later
@@ -75,7 +75,7 @@ public class Exercise2Test {
 
     @Test
     public void localTimeMinus() {
-        LocalTime lt = DateAndTimes.lt_23073050;
+        LocalTime lt = DateAndTimes.LT_23073050;
 
         /**
          * Create a {@link LocalTime} from {@link lt} with 3 hours before
@@ -91,7 +91,7 @@ public class Exercise2Test {
 
     @Test
     public void localTimeMinusDuration() {
-        LocalTime lt = DateAndTimes.lt_23073050;
+        LocalTime lt = DateAndTimes.LT_23073050;
 
         /**
          * Define a {@link Duration} of 3 hours 30 minutes and 20.2 seconds
@@ -111,8 +111,8 @@ public class Exercise2Test {
 
     @Test
     public void localDateIsBefore() {
-        LocalTime lt = DateAndTimes.lt_23073050;
-        LocalTime lt2 = DateAndTimes.lt_12100000;
+        LocalTime lt = DateAndTimes.LT_23073050;
+        LocalTime lt2 = DateAndTimes.LT_12100000;
         /**
          * Check whether {@link lt2} is before {@link lt} or not
          * by using {@link LocalTime#isAfter} or {@link LocalTime#isBefore}
@@ -124,7 +124,7 @@ public class Exercise2Test {
 
     @Test
     public void localTimeTruncatedTo() {
-        LocalTime lt = DateAndTimes.lt_23073050;
+        LocalTime lt = DateAndTimes.LT_23073050;
 
         /**
          * Create a {@link LocalTime} from {@link lt} truncated to minutes by using {@link LocalTime#truncatedTo}

@@ -38,7 +38,7 @@ public class Exercise3Test {
 
     @Test
     public void localTimeWith() {
-        LocalDateTime ldt = DateAndTimes.ldt_20150618_23073050;
+        LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
         /**
          * Create a {@link LocalDateTime} from {@link ldt}
@@ -51,7 +51,7 @@ public class Exercise3Test {
 
     @Test
     public void localDatePlusMinus() {
-        LocalDateTime ldt = DateAndTimes.ldt_20150618_23073050;
+        LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
         /**
          * Create a {@link LocalDateTime} from {@link ldt} with 10 month later and 5 hours before
@@ -64,7 +64,7 @@ public class Exercise3Test {
 
     @Test
     public void localDateTimeFormat() {
-        LocalDateTime ldt = DateAndTimes.ldt_20150618_23073050;
+        LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
         /**
          * Format {@link ldt} to a {@link String} as "2015_06_18_23_07_30"
@@ -77,7 +77,7 @@ public class Exercise3Test {
 
     @Test
     public void toLocalDateAndTime() {
-        LocalDateTime ldt = DateAndTimes.ldt_20150618_23073050;
+        LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
         /**
          * Create a {@link LocalDate} and a {@link LocalTime} from {@link ldt}
@@ -92,8 +92,8 @@ public class Exercise3Test {
 
     @Test
     public void toLocalDateTime() {
-        LocalDate ld = DateAndTimes.ld_20150618;
-        LocalTime lt = DateAndTimes.lt_23073050;
+        LocalDate ld = DateAndTimes.LD_20150618;
+        LocalTime lt = DateAndTimes.LT_23073050;
 
         /**
          * Create two equal {@link LocalDateTime} from {@link ld} and {@link lt}
