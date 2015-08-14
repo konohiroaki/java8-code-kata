@@ -12,12 +12,11 @@ import java.time.LocalDateTime;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
+/**
+ * Though old Date APIs are not recommended to use with Java8 Date and Time APIs,
+ * there could be some cases that you need to do so. Thus you should know how to convert bidirectionally.
+ */
 public class Exercise5Test {
-
-    /**
-     * Though old Date APIs are not recommended to use with Java8 Date and Time APIs,
-     * there could be some cases that you need to do so. Thus you should know how to convert bidirectionally.
-     */
 
     @Test
     public void localDateTime2Timestamp() {
@@ -65,6 +64,5 @@ public class Exercise5Test {
         LocalDate localDate = null;
 
         assertThat(localDate.toString(), is("2015-06-18"));
-
     }
 }
