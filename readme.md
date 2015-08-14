@@ -82,4 +82,8 @@ Advanced problems
 
 + Exercise3Test.java
 
-`LocalDateTime#of`, `LocalDateTime#parse`, `LocalDateTime#format`, `LocalDateTime#toLocalDate`, `LocalDateTime#toLocalTime`
+`LocalDateTime#of`, `LocalDateTime#parse`, `LocalDateTime#format`, `LocalDateTime#toLocalDate` and `LocalDateTime#toLocalTime`
+
++ Exercise4Test.java
+
+`ZonedDateTime#of`, `ZonedDateTime#parse`, `ZonedDateTime#format`, `LocalDateTime#atZone`, `ZonedDateTime#withZoneSameInstant` and `ZonedDateTime#withZoneSameLocal`
