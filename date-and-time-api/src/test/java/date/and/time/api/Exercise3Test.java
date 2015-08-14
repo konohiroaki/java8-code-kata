@@ -99,8 +99,8 @@ public class Exercise3Test {
          * Create two equal {@link LocalDateTime} from {@link ld} and {@link lt}
          * by using {@link LocalDate#atTime} and {@link LocalTime#atDate}
          */
-        LocalDateTime localDateTime1 = null;
-        LocalDateTime localDateTime2 = null;
+        LocalDateTime localDateTime1 = ld.atTime(lt);
+        LocalDateTime localDateTime2 = lt.atDate(ld);
 
         assertThat(localDateTime1.toString(), is("2015-06-18T23:07:30.500"));
         assertThat(localDateTime1.isEqual(localDateTime2), is(true));
