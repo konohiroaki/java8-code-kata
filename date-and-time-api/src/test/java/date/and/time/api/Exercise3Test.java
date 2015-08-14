@@ -89,4 +89,20 @@ public class Exercise3Test {
         assertThat(localDate.toString(), is("2015-06-18"));
         assertThat(localTime.toString(), is("23:07:30.500"));
     }
+
+    @Test
+    public void toLocalDateTime() {
+        LocalDate ld = DateAndTimes.ld_20150618;
+        LocalTime lt = DateAndTimes.lt_23073050;
+
+        /**
+         * Create two equal {@link LocalDateTime} from {@link ld} and {@link lt}
+         * by using {@link LocalDate#atTime} and {@link LocalTime#atDate}
+         */
+        LocalDateTime localDateTime1 = null;
+        LocalDateTime localDateTime2 = null;
+
+        assertThat(localDateTime1.toString(), is("2015-06-18T23:07:30.500"));
+        assertThat(localDateTime1.isEqual(localDateTime2), is(true));
+    }
 }

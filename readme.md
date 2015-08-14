@@ -82,7 +82,7 @@ Advanced problems
 
 + Exercise3Test.java
 
-`LocalDateTime#of`, `LocalDateTime#parse`, `LocalDateTime#format`, `LocalDateTime#toLocalDate` and `LocalDateTime#toLocalTime`
+`LocalDateTime#of`, `LocalDateTime#parse`, `LocalDateTime#format`, `LocalDateTime#toLocalDate`, `LocalDateTime#toLocalTime`, `LocalDate#atTime` and `LocalTime#atDate`
 
 + Exercise4Test.java
 
