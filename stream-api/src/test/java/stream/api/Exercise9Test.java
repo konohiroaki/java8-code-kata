@@ -1,5 +1,6 @@
 package stream.api;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 import common.test.tool.util.CollectorImpl;
@@ -25,11 +26,12 @@ import static org.junit.Assert.*;
 public class Exercise9Test extends ClassicOnlineStore {
 
     @Test
+    @Necessity(true)
     public void simplestStringJoin() {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Implement a {@link java.util.stream.Collector} which can create a String with comma separated names shown in the assertion.
+         * Implement a {@link Collector} which can create a String with comma separated names shown in the assertion.
          * The collector will be used by serial stream.
          */
         Supplier<Object> supplier = null;
@@ -44,12 +46,13 @@ public class Exercise9Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(false)
     public void mapKeyedByItems() {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Implement a {@link java.util.stream.Collector} which can create a {@link java.util.Map} with keys as item and
-         * values as {@link java.util.Set} of customers who are wanting to buy that item.
+         * Implement a {@link Collector} which can create a {@link Map} with keys as item and
+         * values as {@link Set} of customers who are wanting to buy that item.
          * The collector will be used by parallel stream.
          */
         Supplier<Object> supplier = null;
@@ -73,6 +76,7 @@ public class Exercise9Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(false)
     public void bitList2BitString() {
         String bitList = "22-24,9,42-44,11,4,46,14-17,5,2,38-40,33,50,48";
 

@@ -1,5 +1,6 @@
 package date.and.time.api;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -15,6 +16,7 @@ import static org.junit.Assert.*;
 public class Exercise3Test {
 
     @Test
+    @Necessity(true)
     public void localDateTimeOf() {
         /**
          * Create a {@link LocalDateTime} of 2015-06-20 23:07:30 by using {@link LocalDateTime#of}
@@ -25,6 +27,7 @@ public class Exercise3Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateTimeParse() {
         /**
          * Create a {@link LocalDateTime} of 2015-06-20 23:07:30 by using {@link LocalDateTime#parse}
@@ -35,6 +38,7 @@ public class Exercise3Test {
     }
 
     @Test
+    @Necessity(true)
     public void localTimeWith() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -48,6 +52,7 @@ public class Exercise3Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDatePlusMinus() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -61,6 +66,7 @@ public class Exercise3Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateTimeFormat() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -74,6 +80,7 @@ public class Exercise3Test {
     }
 
     @Test
+    @Necessity(true)
     public void toLocalDateAndTime() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -89,6 +96,7 @@ public class Exercise3Test {
     }
 
     @Test
+    @Necessity(true)
     public void toLocalDateTime() {
         LocalDate ld = DateAndTimes.LD_20150618;
         LocalTime lt = DateAndTimes.LT_23073050;

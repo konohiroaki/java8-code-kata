@@ -1,5 +1,6 @@
 package date.and.time.api;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -14,6 +15,7 @@ import static org.junit.Assert.*;
 public class Exercise4Test {
 
     @Test
+    @Necessity(true)
     public void zonedDateTimeOf() {
         /**
          * Create a {@link ZonedDateTime} with time of 2015-07-10 2:14:25.000 as Japan Standard Time
@@ -25,6 +27,7 @@ public class Exercise4Test {
     }
 
     @Test
+    @Necessity(true)
     public void zonedDateTimeParse() {
         /**
          * Create a {@link ZonedDateTime} with time of 2015-06-18 23:07:25.000 as Japan Standard Time
@@ -36,6 +39,7 @@ public class Exercise4Test {
     }
 
     @Test
+    @Necessity(true)
     public void zonedDateTimeFormat() {
         ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 
@@ -49,6 +53,7 @@ public class Exercise4Test {
     }
 
     @Test
+    @Necessity(true)
     public void toPST() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -62,6 +67,7 @@ public class Exercise4Test {
     }
 
     @Test
+    @Necessity(true)
     public void sameInstantAs() {
         ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 
@@ -75,6 +81,7 @@ public class Exercise4Test {
     }
 
     @Test
+    @Necessity(true)
     public void sameLocalAs() {
         ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 

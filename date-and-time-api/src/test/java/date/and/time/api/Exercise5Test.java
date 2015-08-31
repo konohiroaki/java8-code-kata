@@ -1,5 +1,6 @@
 package date.and.time.api;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -19,6 +20,7 @@ import static org.junit.Assert.*;
 public class Exercise5Test {
 
     @Test
+    @Necessity(true)
     public void localDateTime2Timestamp() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -31,6 +33,7 @@ public class Exercise5Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDate2date() {
         LocalDate ld = DateAndTimes.LD_20150618;
 
@@ -43,6 +46,7 @@ public class Exercise5Test {
     }
 
     @Test
+    @Necessity(true)
     public void timestamp2LocalDateTime() {
         Timestamp timestamp = DateAndTimes.OLD_TIMESTAMP_20150618_23073050;
 
@@ -55,6 +59,7 @@ public class Exercise5Test {
     }
 
     @Test
+    @Necessity(true)
     public void date2LocalDate() {
         Date date = DateAndTimes.OLD_DATE_20150618;
 
