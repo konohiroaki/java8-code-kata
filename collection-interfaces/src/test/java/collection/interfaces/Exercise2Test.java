@@ -1,5 +1,7 @@
 package collection.interfaces;
 
+import common.test.tool.annotation.Necessity;
+
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -21,6 +23,7 @@ public class Exercise2Test {
     }};
 
     @Test
+    @Necessity(true)
     public void getDefaultValue() {
         Map<String, Integer> map = new HashMap<>(this.map);
 
@@ -33,6 +36,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void putIfNotExisting() {
         Map<String, Integer> map = new HashMap<>(this.map);
 
@@ -47,6 +51,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void mergeValues() {
         Map<String, Integer> map = new HashMap<>(this.map);
 
@@ -63,6 +68,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void ignoringAbsentKeys() {
         Map<String, Integer> map = new HashMap<>(this.map);
 

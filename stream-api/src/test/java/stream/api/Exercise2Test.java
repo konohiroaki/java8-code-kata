@@ -1,5 +1,6 @@
 package stream.api;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 import common.test.tool.entity.Item;
@@ -19,12 +20,13 @@ import static org.junit.Assert.*;
 public class Exercise2Test extends ClassicOnlineStore {
 
     @Test
+    @Necessity(true)
     public void sortByAge() {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
          * Create a stream with ascending ordered age values.
-         * Use {@link java.util.stream.Stream#sorted} to sort them.
+         * Use {@link Stream#sorted} to sort them.
          */
         Stream<Integer> sortedAgeStream = customerList.stream().map(Customer::getAge).sorted();
 
@@ -33,6 +35,7 @@ public class Exercise2Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void descSortByAge() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -48,11 +51,12 @@ public class Exercise2Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void top3RichCustomer() {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a stream with top 3 rich customers using {@link java.util.stream.Stream#limit} to limit the size of the stream
+         * Create a stream with top 3 rich customers using {@link Stream#limit} to limit the size of the stream
          */
         Stream<String> top3RichCustomerStream = customerList.stream()
             .sorted((customer1, customer2) -> customer2.getBudget() - customer1.getBudget())
@@ -64,11 +68,12 @@ public class Exercise2Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void distinctAge() {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Create a stream with distinct age values using {@link java.util.stream.Stream#distinct}
+         * Create a stream with distinct age values using {@link Stream#distinct}
          */
         Stream<Integer> distinctAgeStream = customerList.stream().map(Customer::getAge).distinct();
 
@@ -77,12 +82,13 @@ public class Exercise2Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void itemsCustomersWantToBuy() {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
          * Create a stream with items' names stored in {@link Customer.wantToBuy}
-         * Use {@link java.util.stream.Stream#flatMap} to create a stream from each element of a stream.
+         * Use {@link Stream#flatMap} to create a stream from each element of a stream.
          */
         Function<Customer, Stream<Item>> getItemStream = customer -> customer.getWantToBuy().stream();
         Stream<String> itemStream = customerList.stream().flatMap(getItemStream).map(Item::getName);

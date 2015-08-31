@@ -1,5 +1,6 @@
 package date.and.time.api;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -14,6 +15,7 @@ import static org.junit.Assert.*;
 public class Exercise2Test {
 
     @Test
+    @Necessity(true)
     public void localTimeOfHourToMinute() {
         /**
          * Create a {@link LocalTime} of 23:07 by using {@link LocalTime#of}
@@ -24,6 +26,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void localTimeOfHourToNanoSec() {
         /**
          * Create a {@link LocalTime} of 23:07:03.1 by using {@link LocalTime#of}
@@ -34,6 +37,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void localTimeParse() {
         /**
          * Create a {@link LocalTime} of 23:07:03.1 from String by using {@link LocalTime#parse}
@@ -44,6 +48,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void localTimeWith() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -59,6 +64,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void localTimePlus() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -74,6 +80,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void localTimeMinus() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -90,6 +97,7 @@ public class Exercise2Test {
 
 
     @Test
+    @Necessity(true)
     public void localTimeMinusDuration() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -110,6 +118,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateIsBefore() {
         LocalTime lt = DateAndTimes.LT_23073050;
         LocalTime lt2 = DateAndTimes.LT_12100000;
@@ -123,6 +132,7 @@ public class Exercise2Test {
     }
 
     @Test
+    @Necessity(true)
     public void localTimeTruncatedTo() {
         LocalTime lt = DateAndTimes.LT_23073050;
 

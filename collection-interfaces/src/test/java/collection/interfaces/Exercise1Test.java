@@ -1,5 +1,6 @@
 package collection.interfaces;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 
@@ -21,6 +22,7 @@ import static org.junit.Assert.*;
 public class Exercise1Test extends ClassicOnlineStore {
 
     @Test
+    @Necessity(true)
     public void iterateByForEach() {
         Iterable<Customer> customerIterable = this.mall.getCustomerList();
         List<String> nameList = new ArrayList<>();
@@ -37,6 +39,7 @@ public class Exercise1Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void whoHaveNoEInYourName() {
         Collection<String> nameCollection =
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));
@@ -52,6 +55,7 @@ public class Exercise1Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void replaceTheElements() {
         List<String> nameList =
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));
@@ -67,6 +71,7 @@ public class Exercise1Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void sortByName() {
         List<String> nameList =
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));
@@ -81,6 +86,7 @@ public class Exercise1Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void createStream() {
         Collection<String> nameList =
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));
@@ -96,6 +102,7 @@ public class Exercise1Test extends ClassicOnlineStore {
     }
 
     @Test
+    @Necessity(true)
     public void createParallelStream() {
         Collection<String> nameList =
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));

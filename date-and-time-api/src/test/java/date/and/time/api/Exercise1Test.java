@@ -1,5 +1,6 @@
 package date.and.time.api;
 
+import common.test.tool.annotation.Necessity;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -15,6 +16,7 @@ import static org.junit.Assert.*;
 public class Exercise1Test {
 
     @Test
+    @Necessity(true)
     public void localDateOf() {
         /**
          * Create a {@link LocalDate} of 2015-06-18 by using {@link LocalDate#of}
@@ -25,6 +27,7 @@ public class Exercise1Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateParse() {
         /**
          * Create a {@link LocalDate} of 2015-06-18 from String by using {@link LocalDate#parse}
@@ -35,6 +38,7 @@ public class Exercise1Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateWith() {
         LocalDate ld = DateAndTimes.LD_20150618;
 
@@ -50,6 +54,7 @@ public class Exercise1Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateWithAdjuster() {
         LocalDate ld = DateAndTimes.LD_20150618;
 
@@ -64,6 +69,7 @@ public class Exercise1Test {
         assertThat(localDate.getDayOfMonth(), is(1));
     }
 
+    @Necessity(true)
     @Test
     public void localDatePlus() {
         LocalDate ld = DateAndTimes.LD_20150618;
@@ -80,6 +86,7 @@ public class Exercise1Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateMinus() {
         LocalDate ld = DateAndTimes.LD_20150618;
 
@@ -96,6 +103,7 @@ public class Exercise1Test {
 
 
     @Test
+    @Necessity(true)
     public void localDatePlusPeriod() {
         LocalDate ld = DateAndTimes.LD_20150618;
 
@@ -112,6 +120,7 @@ public class Exercise1Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateIsAfter() {
         LocalDate ld = DateAndTimes.LD_20150618;
         LocalDate ld2 = DateAndTimes.LD_20150807;
@@ -126,6 +135,7 @@ public class Exercise1Test {
     }
 
     @Test
+    @Necessity(true)
     public void localDateUntil() {
         LocalDate ld = DateAndTimes.LD_20150618;
         LocalDate ld2 = DateAndTimes.LD_20150807;
