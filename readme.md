@@ -16,6 +16,42 @@ The _Java8 Code Kata_ is created to walk-through java8 new API functions. I hope
 
 Edit the unit tests to pass them by following its description.
 
+Test sample.
+
+```java
+
+@Test
+@Necessity(true)
+public void simpleAddition() {
+    /**
+     * Get the result of adding 1 and 2 by using "+"
+     */
+    Integer added = null;
+
+    assertThat(added, is(3));
+}
+
+```
+
+You need to edit the program under the comment.
+
+Solution sample.
+
+```java
+
+@Test
+@Necessity(true)
+public void simpleAddition() {
+    /**
+     * Get the result of adding 1 and 2 by using "+"
+     */
+    Integer added = 1 + 2;
+
+    assertThat(added, is(3));
+}
+
+```
+
 Most tests are annotated with `@Necessity(true)` which means the test only requires basic knowledge.
 
 Tests annotated with `@Necessity(false)` are more difficult and need to think to solve them.
