@@ -24,7 +24,7 @@ Test sample.
 @Necessity(true)
 public void simpleAddition() {
     /**
-     * Get the result of adding 1 and 2 by using "+"
+     * Get an addition result of 1 and 2 by using an operator "+".
      */
     Integer added = null;
 
@@ -43,7 +43,7 @@ Solution sample.
 @Necessity(true)
 public void simpleAddition() {
     /**
-     * Get the result of adding 1 and 2 by using "+"
+     * Get an addition result of 1 and 2 by using an operator "+".
      */
     Integer added = 1 + 2;
 
