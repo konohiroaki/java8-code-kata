@@ -81,7 +81,12 @@ public class Exercise9Test extends ClassicOnlineStore {
         String bitList = "22-24,9,42-44,11,4,46,14-17,5,2,38-40,33,50,48";
 
         /**
-         * Create a bit string of "n"th bit on. "7,1-3,5" will be "1110101"
+         * Create a {@link String} of "n"th bit ON.
+         * for example
+         * "3" will be "001"
+         * "1,3,5" will be "10101"
+         * "1-3" will be "111"
+         * "7,1-3,5" will be "1110101"
          */
         Collector<String, ?, String> toBitString = null;
 
