@@ -6,6 +6,7 @@ import common.test.tool.entity.Customer;
 
 import org.junit.Test;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -68,11 +69,11 @@ public class Exercise5Test extends ClassicOnlineStore {
         List<Customer> customerList = this.mall.getCustomerList();
 
         /**
-         * Get the oldest customer by using {@link Collectors#maxBy}.
+         * Get the oldest customer by using {@link Collectors#maxBy} and {@link Comparator#comparing}.
          * Don't use any intermediate operations.
          */
         Optional<Customer> oldestCustomer = customerList.stream()
-            .collect(Collectors.maxBy((customer1, customer2) -> customer1.getAge() - customer2.getAge()));
+            .collect(Collectors.maxBy(Comparator.comparing(Customer::getAge)));
 
         assertThat(oldestCustomer.get(), is(customerList.get(3)));
     }
