@@ -27,7 +27,7 @@ public class Exercise5Test {
         /**
          * Create a {@link java.sql.Timestamp} from {@link ldt}
          */
-        Timestamp timestamp = null;
+        Timestamp timestamp = Timestamp.valueOf(ldt);
 
         assertThat(timestamp.toString(), is("2015-06-18 23:07:30.5"));
     }
@@ -40,7 +40,7 @@ public class Exercise5Test {
         /**
          * Create a {@link java.sql.Date} from {@link ld}
          */
-        Date date = null;
+        Date date = Date.valueOf(ld);
 
         assertThat(date.toString(), is("2015-06-18"));
     }
@@ -53,7 +53,7 @@ public class Exercise5Test {
         /**
          * Create a {@link LocalDateTime} from {@link timestamp}
          */
-        LocalDateTime localDateTime = null;
+        LocalDateTime localDateTime = timestamp.toLocalDateTime();
 
         assertThat(localDateTime.toString(), is("2015-06-18T23:07:30.500"));
     }
@@ -66,7 +66,7 @@ public class Exercise5Test {
         /**
          * Create a {@link LocalDate} from {@link date}
          */
-        LocalDate localDate = null;
+        LocalDate localDate = date.toLocalDate();
 
         assertThat(localDate.toString(), is("2015-06-18"));
     }
