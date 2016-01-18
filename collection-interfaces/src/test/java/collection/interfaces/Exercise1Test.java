@@ -79,7 +79,7 @@ public class Exercise1Test extends ClassicOnlineStore {
         /**
          * Create a {@link Comparator} to sort the name list by their name's length in ascending order.
          */
-        Comparator<String> comparator = (a, b) -> a.length() - b.length();
+        Comparator<String> comparator = Comparator.comparingInt(String::length);
         nameList.sort(comparator);
 
         assertThat(nameList.toString(), is("[Joe, Chris, Steven, Patrick]"));
