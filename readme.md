@@ -1,6 +1,8 @@
 # Java8 Code Kata
 [![Build Status](https://travis-ci.org/konohiroaki/java8-code-kata.svg?branch=solution)](https://travis-ci.org/konohiroaki/java8-code-kata)
 
+☝ It's failing because tests are not solved yet! :blush:
+
 ## What is Code Kata?
 
 According to [www.codekatas.org](http://www.codekatas.org/)
