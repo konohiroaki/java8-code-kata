@@ -1,6 +1,6 @@
-## Java8 Code Kata
+# Java8 Code Kata
 
-### What is Code Kata?
+## What is Code Kata?
 
 According to [www.codekatas.org](http://www.codekatas.org/)
 > Code Kata is a term coined by Dave Thomas, co-author of the book The Pragmatic Programmer, in a bow to the Japanese concept of kata in the martial arts. A code kata is an exercise in programming which helps a programmer hone their skills through practice and repetition.
@@ -8,13 +8,22 @@ According to [www.codekatas.org](http://www.codekatas.org/)
 
 Also refer [codekata.com](http://codekata.com/)
 
-### What is Java8 Code Kata?
+## What is Java8 Code Kata?
 
 The _Java8 Code Kata_ is created to walk-through java8 new API functions. I hope this helps you learn Java8 and get used to it. Repeating exercises will definitely upgrade your skills.
 
-### Usage
+## Usage
+* Resolve dependencies.
 
-Edit the unit tests to pass them by following its description.
+```
+$ pwd
+/path/to/java8-code-kata
+
+$ ./mvnw dependency:resolve
+-> will download the dependent jar files in your .m2 directory.
+```
+
+* Edit the unit tests to pass them by following its description.
 
 Test sample.
 
@@ -56,13 +65,13 @@ Most tests are annotated with `@Necessity(true)` which means the test only requi
 
 Tests annotated with `@Necessity(false)` are more difficult and need to think to solve them.
 
-### Where are the answers?
+## Where are the answers?
 
 Check the 'solution' branch, but please try to solve by yourself at first.
 
-### Modules
+## Modules
 
-#### collection-interfaces
+### collection-interfaces
 
 + Exercise1Test.java
 
@@ -72,7 +81,7 @@ Check the 'solution' branch, but please try to solve by yourself at first.
 
 `Map#getOrDefault`, `Map#putIfAbsent`, `Map#merge` and `Map#computeIfPresent`
 
-#### stream-api
+### stream-api
 
 + Exercise1Test.java
 
@@ -110,7 +119,7 @@ Advanced problems
 
 `Collector`
 
-#### date-and-time-api
+### date-and-time-api
 
 + Exercise1Test.java
 
