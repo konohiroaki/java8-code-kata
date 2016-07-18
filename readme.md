@@ -20,7 +20,7 @@ $ pwd
 /path/to/java8-code-kata
 
 $ ./mvnw dependency:resolve
--> will download the dependent jar files in your `.m2` directory.
+-> will download the dependent jar files in your .m2 directory.
 ```
 
 * Edit the unit tests to pass them by following its description.
