@@ -1,4 +1,5 @@
 # Java8 Code Kata
+[![Build Status](https://travis-ci.org/konohiroaki/java8-code-kata.svg?branch=master)](https://travis-ci.org/konohiroaki/java8-code-kata)
 
 ## What is Code Kata?
 
