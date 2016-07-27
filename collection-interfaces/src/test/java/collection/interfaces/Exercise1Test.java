@@ -33,7 +33,7 @@ public class Exercise1Test extends ClassicOnlineStore {
          * to finish creating the name list.
          */
         Consumer<Object> consumer = null;
-        customerIterable.forEach(null);
+        // customerIterable.
 
         assertThat(nameList.toString(), is("[Joe, Steven, Patrick, Diana, Chris, Kathy, Alice, Andrew, Martin, Amy]"));
     }
@@ -46,10 +46,10 @@ public class Exercise1Test extends ClassicOnlineStore {
 
         /**
          * Create a {@link Predicate} which predicates if the input string contains "e".
-         * Remove elements from {@link nameCollection} which contains "e" like shown in the assertion.
+         * Remove elements from {@link nameCollection} which contains "e" using {@link Collection#removeIf}.
          */
         Predicate<Object> predicate = null;
-        nameCollection.removeIf(null);
+        // nameCollection.
 
         assertThat(nameCollection.toString(), is("[Patrick, Chris]"));
     }
@@ -62,10 +62,10 @@ public class Exercise1Test extends ClassicOnlineStore {
 
         /**
          * Create a {@link UnaryOperator} which returns given string wrapped with "()".
-         * Replace the elements in {@link nameList} with string wrapped with brackets like shown in the assertion.
+         * Replace the elements in {@link nameList} with string wrapped with "()" using {@link List#replaceAll} .
          */
         UnaryOperator<Object> unaryOperator = null;
-        nameList.replaceAll(null);
+        // nameList.
 
         assertThat(nameList.toString(), is("[(Joe), (Steven), (Patrick), (Chris)]"));
     }
@@ -80,7 +80,7 @@ public class Exercise1Test extends ClassicOnlineStore {
          * Create a {@link Comparator} to sort the name list by their name's length in ascending order.
          */
         Comparator<Object> comparator = null;
-        nameList.sort(null);
+        // nameList.
 
         assertThat(nameList.toString(), is("[Joe, Chris, Steven, Patrick]"));
     }
