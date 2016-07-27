@@ -16,6 +16,7 @@ import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
+import static javax.swing.text.html.HTML.Tag.HEAD;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
@@ -45,8 +46,8 @@ public class Exercise1Test extends ClassicOnlineStore {
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));
 
         /**
-         * Create a {@link Predicate} which predicates whether the input string containing string "e".
-         * Remove elements from {@link nameCollection} which
+         * Create a {@link Predicate} which predicates if the input string contains "e".
+         * Remove elements from {@link nameCollection} which contains "e" using {@link Collection#removeIf}.
          */
         Predicate<String> predicate = name -> name.contains("e");
         nameCollection.removeIf(predicate);
@@ -62,7 +63,7 @@ public class Exercise1Test extends ClassicOnlineStore {
 
         /**
          * Create a {@link UnaryOperator} which returns given string wrapped with "()".
-         * Replace the elements in {@link nameList} with string wrapped with brackets like shown in the assertion.
+         * Replace the elements in {@link nameList} with string wrapped with "()" using {@link List#replaceAll} .
          */
         UnaryOperator<String> unaryOperator = e -> "(" + e + ")";
         nameList.replaceAll(unaryOperator);

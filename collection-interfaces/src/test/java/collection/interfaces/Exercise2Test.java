@@ -56,7 +56,7 @@ public class Exercise2Test {
         Map<String, Integer> map = new HashMap<>(this.map);
 
         /**
-         * Merge 2 entry to {@link map} with key as "Alice" value as 32, key as "Joe" and value as 32 using {@link Map#merge}.
+         * Merge 2 entry to {@link map} with key="Alice" value=32, key="Joe" value=54 using {@link Map#merge}.
          * If the value already exist for the key, remap with sum value.
          */
         BiFunction<Integer, Integer, Integer> remappingFunction = (oldVal, newVal) -> oldVal + newVal;
@@ -73,12 +73,12 @@ public class Exercise2Test {
         Map<String, Integer> map = new HashMap<>(this.map);
 
         /**
-         * Try to increment the value for keys "Joe", "Steven" and "Alice".
+         * Try to increment the value for keys "Joe", "Steven" and "Alice" using {@link Map#computeIfPresent}.
          */
-        BiFunction<Object, Integer, Integer> remappingFunction = (key, val) -> ++val;
-        map.computeIfPresent("Joe", remappingFunction);
-        map.computeIfPresent("Steven", remappingFunction);
-        map.computeIfPresent("Alice", remappingFunction);
+        BiFunction<Object, Object, Integer> remappingFunction = null;
+        // map.
+        // map.
+        // map.
 
         assertThat(map.get("Joe"), is(23));
         assertThat(map.get("Steven"), is(28));
