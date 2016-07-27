@@ -45,8 +45,8 @@ public class Exercise1Test extends ClassicOnlineStore {
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));
 
         /**
-         * Create a {@link Predicate} which predicates whether the input string containing string "e".
-         * Remove elements from {@link nameCollection} which
+         * Create a {@link Predicate} which predicates if the input string contains "e".
+         * Remove elements from {@link nameCollection} which contains "e" like shown in the assertion.
          */
         Predicate<Object> predicate = null;
         nameCollection.removeIf(null);
