@@ -75,10 +75,10 @@ public class Exercise2Test {
         /**
          * Try to increment the value for keys "Joe", "Steven" and "Alice" using {@link Map#computeIfPresent}.
          */
-        BiFunction<Object, Object, Integer> remappingFunction = null;
-        // map.
-        // map.
-        // map.
+        BiFunction<Object, Integer, Integer> remappingFunction = (key, val) -> ++val;
+        map.computeIfPresent("Joe", remappingFunction);
+        map.computeIfPresent("Steven", remappingFunction);
+        map.computeIfPresent("Alice", remappingFunction);
 
         assertThat(map.get("Joe"), is(23));
         assertThat(map.get("Steven"), is(28));
