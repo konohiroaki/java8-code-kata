@@ -56,7 +56,7 @@ public class Exercise2Test {
         Map<String, Integer> map = new HashMap<>(this.map);
 
         /**
-         * Merge 2 entry to {@link map} with key="Alice" value=32, key="Joe" value=54 using {@link Map#merge}.
+         * Merge 2 entry to {@link map} with key="Alice" value=32, key="Joe" value=32 using {@link Map#merge}.
          * If the value already exist for the key, remap with sum value.
          */
         BiFunction<Integer, Integer, Integer> remappingFunction = (oldVal, newVal) -> oldVal + newVal;
