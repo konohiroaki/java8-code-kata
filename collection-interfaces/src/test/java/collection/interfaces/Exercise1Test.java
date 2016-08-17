@@ -109,7 +109,7 @@ public class Exercise1Test extends ClassicOnlineStore {
             new ArrayList<>(Arrays.asList("Joe", "Steven", "Patrick", "Chris"));
 
         /**
-         * Create a serial {@link Stream} using {@link Collection#parallelStream} or {@link Stream#parallel}
+         * Create a parallel {@link Stream} using {@link Collection#parallelStream} or {@link Stream#parallel}
          */
         Stream<String> nameParallelStream = nameList.parallelStream(); // or nameList.stream().parallel();
 
