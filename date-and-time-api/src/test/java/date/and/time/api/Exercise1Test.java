@@ -76,7 +76,7 @@ public class Exercise1Test {
 
         /**
          * Create a {@link LocalDate} from {@link ld} with 10 month later
-         * by using {@link LocalDate#plusDays} or {@link LocalDate#plus}
+         * by using {@link LocalDate#plusMonths} or {@link LocalDate#plus}
          */
         LocalDate localDate = null;
 
