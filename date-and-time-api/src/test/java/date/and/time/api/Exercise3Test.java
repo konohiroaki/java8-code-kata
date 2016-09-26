@@ -1,6 +1,6 @@
 package date.and.time.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -15,8 +15,7 @@ import static org.junit.Assert.*;
 
 public class Exercise3Test {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localDateTimeOf() {
         /**
          * Create a {@link LocalDateTime} of 2015-06-20 23:07:30 by using {@link LocalDateTime#of}
@@ -26,8 +25,7 @@ public class Exercise3Test {
         assertThat(localDateTime.toString(), is("2015-06-20T23:07:30"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localDateTimeParse() {
         /**
          * Create a {@link LocalDateTime} of 2015-06-20 23:07:30 by using {@link LocalDateTime#parse}
@@ -37,8 +35,7 @@ public class Exercise3Test {
         assertThat(localDateTime.toString(), is("2015-06-20T23:07:30"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeWith() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -51,8 +48,7 @@ public class Exercise3Test {
         assertThat(localDateTime.toString(), is("2015-07-01T23:00"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localDatePlusMinus() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -65,8 +61,7 @@ public class Exercise3Test {
         assertThat(localDateTime.toString(), is("2016-04-18T18:07:30.500"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localDateTimeFormat() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -79,8 +74,7 @@ public class Exercise3Test {
         assertThat(strLdt, is("2015_06_18_23_07_30"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void toLocalDateAndTime() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -95,8 +89,7 @@ public class Exercise3Test {
         assertThat(localTime.toString(), is("23:07:30.500"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void toLocalDateTime() {
         LocalDate ld = DateAndTimes.LD_20150618;
         LocalTime lt = DateAndTimes.LT_23073050;

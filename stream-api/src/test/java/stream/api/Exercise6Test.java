@@ -1,6 +1,6 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 
 import org.junit.Test;
 
@@ -13,8 +13,7 @@ import static org.junit.Assert.*;
 
 public class Exercise6Test {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void streamFromValues() {
         /**
          * Create a stream with string values "a" "b" "c" by using {@link Stream#of}
@@ -25,8 +24,7 @@ public class Exercise6Test {
         assertThat(abcList, contains("a", "b", "c"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void numberStream() {
         /**
          * Create a stream only with multiples of 3, starting from 0, size of 10, by using {@link Stream#iterate}

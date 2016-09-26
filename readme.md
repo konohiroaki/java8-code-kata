@@ -33,7 +33,7 @@ Test sample.
 ```java
 
 @Test
-@Necessity(true)
+@Easy
 public void simpleAddition() {
     /**
      * Get an addition result of 1 and 2 by using an operator "+".
@@ -51,8 +51,7 @@ Solution sample.
 
 ```java
 
-@Test
-@Necessity(true)
+@Easy @Test
 public void simpleAddition() {
     /**
      * Get an addition result of 1 and 2 by using an operator "+".
@@ -64,9 +63,9 @@ public void simpleAddition() {
 
 ```
 
-Most tests are annotated with `@Necessity(true)` which means the test only requires basic knowledge.
+Most tests are annotated with `@Easy` which means those tests only requires basic knowledge.
 
-Tests annotated with `@Necessity(false)` are more difficult and need to think to solve them.
+Tests annotated with `@Difficult` expect you to think a lot :grin:
 
 ## Where are the answers?
 

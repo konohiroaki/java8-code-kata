@@ -1,6 +1,6 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Difficult;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 import common.test.tool.entity.Item;
@@ -19,8 +19,7 @@ import static org.junit.Assert.*;
 
 public class Exercise8Test extends ClassicOnlineStore {
 
-    @Test
-    @Necessity(false)
+    @Difficult @Test
     public void itemsNotOnSale() {
         Stream<Customer> customerStream = this.mall.getCustomerList().stream();
         Stream<Shop> shopStream = this.mall.getShopList().stream();
@@ -35,8 +34,7 @@ public class Exercise8Test extends ClassicOnlineStore {
         assertThat(itemSetNotOnSale, hasItems("bag", "pants", "coat"));
     }
 
-    @Test
-    @Necessity(false)
+    @Difficult @Test
     public void havingEnoughMoney() {
         Stream<Customer> customerStream = this.mall.getCustomerList().stream();
         Stream<Shop> shopStream = this.mall.getShopList().stream();

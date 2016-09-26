@@ -1,6 +1,6 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 import common.test.tool.entity.Item;
@@ -19,8 +19,7 @@ import static org.junit.Assert.*;
 
 public class Exercise2Test extends ClassicOnlineStore {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void sortByAge() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -34,8 +33,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         assertThat(sortedAgeList, contains(21, 22, 22, 26, 27, 28, 32, 35, 36, 38));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void descSortByAge() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -50,8 +48,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         assertThat(sortedAgeList, contains(38, 36, 35, 32, 28, 27, 26, 22, 22, 21));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void top3RichCustomer() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -64,8 +61,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         assertThat(top3RichCustomerList, contains("Diana", "Andrew", "Chris"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void distinctAge() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -78,8 +74,7 @@ public class Exercise2Test extends ClassicOnlineStore {
         assertThat(distinctAgeList, contains(22, 27, 28, 38, 26, 32, 35, 21, 36));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void itemsCustomersWantToBuy() {
         List<Customer> customerList = this.mall.getCustomerList();
 

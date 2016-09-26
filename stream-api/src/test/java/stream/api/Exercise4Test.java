@@ -1,6 +1,6 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 
@@ -15,8 +15,7 @@ import static org.junit.Assert.*;
 
 public class Exercise4Test extends ClassicOnlineStore {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void firstRegistrant() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -29,8 +28,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         assertThat(firstCustomer.get(), is(customerList.get(0)));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void isThereAnyoneOlderThan40() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -42,8 +40,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         assertThat(olderThan40Exists, is(false));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void isEverybodyOlderThan20() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -55,8 +52,7 @@ public class Exercise4Test extends ClassicOnlineStore {
         assertThat(allOlderThan20, is(true));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void everyoneWantsSomething() {
         List<Customer> customerList = this.mall.getCustomerList();
 

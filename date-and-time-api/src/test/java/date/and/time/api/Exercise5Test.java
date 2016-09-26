@@ -1,6 +1,6 @@
 package date.and.time.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -14,13 +14,12 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 /**
- * Though old Date APIs are not recommended to use with Java8 Date and Time APIs,
- * there could be some cases that you need to do so. Thus you should know how to convert bidirectionally.
+ * Though old Date APIs are not recommended to use with Java8 Date and Time APIs, there could be some cases that you
+ * need to do so. Thus you should know how to convert bidirectionally.
  */
 public class Exercise5Test {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localDateTime2Timestamp() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -32,8 +31,7 @@ public class Exercise5Test {
         assertThat(timestamp.toString(), is("2015-06-18 23:07:30.5"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localDate2date() {
         LocalDate ld = DateAndTimes.LD_20150618;
 
@@ -45,8 +43,7 @@ public class Exercise5Test {
         assertThat(date.toString(), is("2015-06-18"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void timestamp2LocalDateTime() {
         Timestamp timestamp = DateAndTimes.OLD_TIMESTAMP_20150618_23073050;
 
@@ -58,8 +55,7 @@ public class Exercise5Test {
         assertThat(localDateTime.toString(), is("2015-06-18T23:07:30.500"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void date2LocalDate() {
         Date date = DateAndTimes.OLD_DATE_20150618;
 

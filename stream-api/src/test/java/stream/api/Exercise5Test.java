@@ -1,6 +1,6 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 
@@ -21,8 +21,7 @@ import static org.junit.Assert.*;
 
 public class Exercise5Test extends ClassicOnlineStore {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void nameList() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -35,8 +34,7 @@ public class Exercise5Test extends ClassicOnlineStore {
                                       "Martin", "Amy"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void ageSet() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -49,8 +47,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         assertThat(ageSet, hasItems(21, 22, 26, 27, 28, 32, 35, 36, 38));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void nameInCsv() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -62,8 +59,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         assertThat(string, is("[Joe,Steven,Patrick,Diana,Chris,Kathy,Alice,Andrew,Martin,Amy]"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void oldestCustomer() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -76,8 +72,7 @@ public class Exercise5Test extends ClassicOnlineStore {
         assertThat(oldestCustomer.get(), is(customerList.get(3)));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void ageDistribution() {
         List<Customer> customerList = this.mall.getCustomerList();
 

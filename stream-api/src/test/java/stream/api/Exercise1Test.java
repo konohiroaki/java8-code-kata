@@ -1,6 +1,6 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 import common.test.tool.util.AssertUtil;
@@ -19,8 +19,7 @@ import static org.junit.Assert.*;
 
 public class Exercise1Test extends ClassicOnlineStore {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void findRichCustomers() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -37,8 +36,7 @@ public class Exercise1Test extends ClassicOnlineStore {
         assertThat(richCustomer, contains(customerList.get(3), customerList.get(7)));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void howOldAreTheCustomers() {
         List<Customer> customerList = this.mall.getCustomerList();
 
