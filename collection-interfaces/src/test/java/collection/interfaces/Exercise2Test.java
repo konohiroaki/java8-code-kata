@@ -1,6 +1,6 @@
 package collection.interfaces;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 
 import org.junit.Test;
 
@@ -22,8 +22,7 @@ public class Exercise2Test {
         put("Chris", 26);
     }};
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void getDefaultValue() {
         Map<String, Integer> map = new HashMap<>(this.map);
 
@@ -35,8 +34,7 @@ public class Exercise2Test {
         assertThat(defaultVal, is(30));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void putIfNotExisting() {
         Map<String, Integer> map = new HashMap<>(this.map);
 
@@ -50,8 +48,7 @@ public class Exercise2Test {
         assertThat(map.get("Joe"), is(22));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void mergeValues() {
         Map<String, Integer> map = new HashMap<>(this.map);
 
@@ -67,8 +64,7 @@ public class Exercise2Test {
         assertThat(map.get("Joe"), is(54));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void ignoringAbsentKeys() {
         Map<String, Integer> map = new HashMap<>(this.map);
 

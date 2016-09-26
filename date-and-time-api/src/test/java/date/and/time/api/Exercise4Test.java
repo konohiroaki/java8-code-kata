@@ -1,6 +1,6 @@
 package date.and.time.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -15,8 +15,7 @@ import static org.junit.Assert.*;
 
 public class Exercise4Test {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void zonedDateTimeOf() {
         /**
          * Create a {@link ZonedDateTime} with time of 2015-07-10 2:14:25.000 as Japan Standard Time
@@ -27,8 +26,7 @@ public class Exercise4Test {
         assertThat(zonedDateTime.toString(), is("2015-07-10T02:14:25+09:00[Asia/Tokyo]"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void zonedDateTimeParse() {
         /**
          * Create a {@link ZonedDateTime} with time of 2015-06-18 23:07:25.000 as Japan Standard Time
@@ -39,8 +37,7 @@ public class Exercise4Test {
         assertThat(zonedDateTime.toString(), is("2015-06-18T23:07:25+09:00[Asia/Tokyo]"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void zonedDateTimeFormat() {
         ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 
@@ -53,8 +50,7 @@ public class Exercise4Test {
         assertThat(strZdt, is("2015_06_18_23_07_30_JST"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void toPST() {
         LocalDateTime ldt = DateAndTimes.LDT_20150618_23073050;
 
@@ -67,8 +63,7 @@ public class Exercise4Test {
         assertThat(zonedDateTime.getZone().toString(), is("America/Los_Angeles"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void sameInstantAs() {
         ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 
@@ -81,8 +76,7 @@ public class Exercise4Test {
         assertThat(zonedDateTime.toString(), is("2015-06-18T07:07:30.500-07:00[America/Los_Angeles]"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void sameLocalAs() {
         ZonedDateTime zdt = DateAndTimes.ZDT_20150618_23073050;
 

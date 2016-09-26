@@ -1,6 +1,6 @@
 package date.and.time.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.DateAndTimes;
 
 import org.junit.Test;
@@ -14,8 +14,7 @@ import static org.junit.Assert.*;
 
 public class Exercise2Test {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeOfHourToMinute() {
         /**
          * Create a {@link LocalTime} of 23:07 by using {@link LocalTime#of}
@@ -25,8 +24,7 @@ public class Exercise2Test {
         assertThat(localTime.toString(), is("23:07"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeOfHourToNanoSec() {
         /**
          * Create a {@link LocalTime} of 23:07:03.1 by using {@link LocalTime#of}
@@ -36,8 +34,7 @@ public class Exercise2Test {
         assertThat(localTime.toString(), is("23:07:03.100"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeParse() {
         /**
          * Create a {@link LocalTime} of 23:07:03.1 from String by using {@link LocalTime#parse}
@@ -47,8 +44,7 @@ public class Exercise2Test {
         assertThat(localTime.toString(), is("23:07:03.100"));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeWith() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -63,8 +59,7 @@ public class Exercise2Test {
         assertThat(localTime.getSecond(), is(lt.getSecond()));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimePlus() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -79,8 +74,7 @@ public class Exercise2Test {
         assertThat(localTime.getSecond(), is(lt.getSecond()));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeMinus() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -96,8 +90,7 @@ public class Exercise2Test {
     }
 
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeMinusDuration() {
         LocalTime lt = DateAndTimes.LT_23073050;
 
@@ -117,8 +110,7 @@ public class Exercise2Test {
 
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localDateIsBefore() {
         LocalTime lt = DateAndTimes.LT_23073050;
         LocalTime lt2 = DateAndTimes.LT_12100000;
@@ -131,8 +123,7 @@ public class Exercise2Test {
         assertThat(isBefore2307, is(true));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void localTimeTruncatedTo() {
         LocalTime lt = DateAndTimes.LT_23073050;
 

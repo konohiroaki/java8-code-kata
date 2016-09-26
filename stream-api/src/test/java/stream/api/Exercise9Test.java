@@ -1,6 +1,7 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Difficult;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 import common.test.tool.util.CollectorImpl;
@@ -31,8 +32,7 @@ import static org.junit.Assert.*;
 
 public class Exercise9Test extends ClassicOnlineStore {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void simplestStringJoin() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -51,8 +51,7 @@ public class Exercise9Test extends ClassicOnlineStore {
         assertThat(nameAsCsv, is("Joe,Steven,Patrick,Diana,Chris,Kathy,Alice,Andrew,Martin,Amy"));
     }
 
-    @Test
-    @Necessity(false)
+    @Difficult @Test
     public void mapKeyedByItems() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -99,8 +98,7 @@ public class Exercise9Test extends ClassicOnlineStore {
         assertThat(itemMap.get("desk"), containsInAnyOrder("Alice"));
     }
 
-    @Test
-    @Necessity(false)
+    @Difficult @Test
     public void bitList2BitString() {
         String bitList = "22-24,9,42-44,11,4,46,14-17,5,2,38-40,33,50,48";
 

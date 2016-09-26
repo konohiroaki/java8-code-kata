@@ -1,6 +1,6 @@
 package stream.api;
 
-import common.test.tool.annotation.Necessity;
+import common.test.tool.annotation.Easy;
 import common.test.tool.dataset.ClassicOnlineStore;
 import common.test.tool.entity.Customer;
 import common.test.tool.entity.Item;
@@ -19,8 +19,7 @@ import static org.junit.Assert.*;
 
 public class Exercise7Test extends ClassicOnlineStore {
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void averageAge() {
         List<Customer> customerList = this.mall.getCustomerList();
 
@@ -34,8 +33,7 @@ public class Exercise7Test extends ClassicOnlineStore {
         assertThat(average.getAsDouble(), is(28.7));
     }
 
-    @Test
-    @Necessity(true)
+    @Easy @Test
     public void howMuchToBuyAllItems() {
         List<Shop> shopList = this.mall.getShopList();
 
