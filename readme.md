@@ -31,9 +31,7 @@ $ ./mvnw dependency:resolve
 Test sample.
 
 ```java
-
-@Test
-@Easy
+@Easy @Test
 public void simpleAddition() {
     /**
      * Get an addition result of 1 and 2 by using an operator "+".
@@ -42,7 +40,6 @@ public void simpleAddition() {
 
     assertThat(added, is(3));
 }
-
 ```
 
 You need to edit the program under the comment.
@@ -50,7 +47,6 @@ You need to edit the program under the comment.
 Solution sample.
 
 ```java
-
 @Easy @Test
 public void simpleAddition() {
     /**
@@ -60,7 +56,6 @@ public void simpleAddition() {
 
     assertThat(added, is(3));
 }
-
 ```
 
 Most tests are annotated with `@Easy` which means those tests only requires basic knowledge.
