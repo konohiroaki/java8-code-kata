@@ -16,19 +16,22 @@ Also refer [codekata.com](http://codekata.com/)
 The _Java8 Code Kata_ is created to walk-through java8 new API functions. I hope this helps you learn Java8 and get used to it. Repeating exercises will definitely upgrade your skills.
 
 ## Usage
-* Resolve dependencies.
+* Run the tests
+
+You can run tests from your IDE or command line if you like. If you are using an IDE, right click on the test method and click `Run foobar()`. If you prefer command line, follow below.
 
 ```
 $ pwd
 /path/to/java8-code-kata
 
-$ ./mvnw dependency:resolve
--> will download the dependent jar files in your .m2 directory.
+$ ./mvnw install -Dmaven.test.skip=true
+
+$ ./mvnw test -Dtest=Exercise1Test#findRichCustomers -pl stream-api
 ```
 
-* Edit the unit tests to pass them by following its description.
+* Edit unit tests.
 
-Test sample.
+To successfully pass the tests, you'll need to edit the test itself. You can see where you need to edit.
 
 ```java
 @Easy @Test
@@ -42,9 +45,7 @@ public void simpleAddition() {
 }
 ```
 
-You need to edit the program under the comment.
-
-Solution sample.
+Here is a sample answer.
 
 ```java
 @Easy @Test
@@ -60,7 +61,7 @@ public void simpleAddition() {
 
 Most tests are annotated with `@Easy` which means those tests only requires basic knowledge.
 
-Tests annotated with `@Difficult` expect you to think a lot :grin:
+Tests annotated with `@Difficult` are more difficult. :grin:
 
 ## Where are the answers?
 
