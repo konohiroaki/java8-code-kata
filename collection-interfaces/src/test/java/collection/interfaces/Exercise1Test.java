@@ -16,7 +16,6 @@ import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
-import static javax.swing.text.html.HTML.Tag.HEAD;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
