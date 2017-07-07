@@ -49,8 +49,8 @@ public class Exercise1Test extends ClassicOnlineStore {
         Stream<Integer> ageStream = customerList.stream().map(getAgeFunction);
 
         assertTrue(AssertUtil.isLambda(getAgeFunction));
-        List<Integer> richCustomer = ageStream.collect(Collectors.toList());
-        assertThat(richCustomer, hasSize(10));
-        assertThat(richCustomer, contains(22, 27, 28, 38, 26, 22, 32, 35, 21, 36));
+        List<Integer> ages = ageStream.collect(Collectors.toList());
+        assertThat(ages, hasSize(10));
+        assertThat(ages, contains(22, 27, 28, 38, 26, 22, 32, 35, 21, 36));
     }
 }
