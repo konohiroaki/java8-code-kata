@@ -9,5 +9,5 @@ import javax.xml.bind.JAXB;
 public class ClassicOnlineStore {
 
     protected final OnlineShoppingMall mall =
-        JAXB.unmarshal(new File("../common-test-tool/src/test/resources/data.xml"), OnlineShoppingMall.class);
+        JAXB.unmarshal(getClass().getClassLoader().getResource("data.xml"), OnlineShoppingMall.class);
 }
