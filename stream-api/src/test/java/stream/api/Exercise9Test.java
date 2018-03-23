@@ -34,10 +34,10 @@ public class Exercise9Test extends ClassicOnlineStore {
          * Implement a {@link Collector} which can create a String with comma separated names shown in the assertion.
          * The collector will be used by serial stream.
          */
-        Supplier<Object> supplier = null;
-        BiConsumer<Object, String> accumulator = null;
-        BinaryOperator<Object> combiner = null;
-        Function<Object, String> finisher = null;
+        Supplier<StringBuilder> supplier = StringBuilder::new;
+        BiConsumer<StringBuilder, String> accumulator = (builder,input) -> builder.append(input).append(",");
+        BinaryOperator<StringBuilder> combiner = StringBuilder::append;
+        Function<StringBuilder, String> finisher = builder -> builder.deleteCharAt(builder.length()-1).toString() ;
 
         Collector<String, ?, String> toCsv =
             new CollectorImpl<>(supplier, accumulator, combiner, finisher, Collections.emptySet());

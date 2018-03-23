@@ -56,7 +56,7 @@ public class Exercise2Test extends ClassicOnlineStore {
          * Create a stream with top 3 rich customers using {@link Stream#limit} to limit the size of the stream
          */
     Stream<String> top3RichCustomerStream = customerList.stream()
-        .sorted((customer1, customer2) -> customer2.getBudget() - customer1.getBudget())
+        .sorted(Comparator.comparingInt(Customer::getBudget).reversed())
         .map(Customer::getName).limit(3);
 
         List<String> top3RichCustomerList = top3RichCustomerStream.collect(Collectors.toList());
