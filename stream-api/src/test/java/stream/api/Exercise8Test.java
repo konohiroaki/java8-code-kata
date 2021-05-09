@@ -54,7 +54,7 @@ public class Exercise8Test extends ClassicOnlineStore {
         Predicate<Customer> havingEnoughMoney =
             customer -> customer.getBudget() >= customer.getWantToBuy().stream().mapToInt(
                 wantedItem -> onSale.stream().filter(shopItem -> shopItem.getName().equals(wantedItem.getName()))
-                    .sorted((o1, o2) -> o1.getPrice() - o2.getPrice())
+                    .sorted(Comparator.comparingInt(Item::getPrice))
                     .findFirst().map(Item::getPrice).orElse(0)
             ).sum();
         List<String> customerNameList = customerStream.filter(havingEnoughMoney)
